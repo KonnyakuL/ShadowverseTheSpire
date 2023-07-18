@@ -1,0 +1,18 @@
+{
+  "SvTS:Strike_Necromancer": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害"
+  },
+  "SvTS:Defend_Necromancer": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡"
+  },
+  "SvTS:ElderSpartoiSoldier": {
+    "NAME": "腐朽的骷髅兵",
+    "DESCRIPTION": "造成 !D! 点伤害"
+  },
+  "SvTS:UndyingResentment": {
+    "NAME": "不灭的怨念",
+    "DESCRIPTION": "造成 !D! 点伤害"
+  }
+}

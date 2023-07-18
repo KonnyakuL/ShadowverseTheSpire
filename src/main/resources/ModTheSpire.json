@@ -1,0 +1,14 @@
+{
+  "modid": "SvTS",
+  "name": "ShadowverseTheSpire",
+  "author_list": [
+    "Konnyaku"
+  ],
+  "description": "ShadowverseTheSpire v0.0.1",
+  "dependencies": [
+    "basemod"
+  ],
+  "version": "0.0.1",
+  "mts_version": "3.30.3",
+  "sts_version": "12-28-2022"
+}

@@ -1,0 +1,9 @@
+{
+  "SvTS:Lunas_Friend": {
+    "NAME": "测试遗物",
+    "FLAVOR": "这个人很懒，什么都没写",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，抽 #b1 张牌（雾。"
+    ]
+  }
+}
