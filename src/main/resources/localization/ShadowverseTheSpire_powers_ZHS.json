@@ -1,0 +1,8 @@
+{
+  "SvTS:TestPower": {
+    "NAME": "测试能力",
+    "DESCRIPTIONS": [
+      "当你受到 #y违背格挡 的攻击伤害时，恢复 #b%d 点生命。"
+    ]
+  }
+}

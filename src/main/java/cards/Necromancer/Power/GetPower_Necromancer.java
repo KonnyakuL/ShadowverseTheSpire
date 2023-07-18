@@ -1,59 +1,59 @@
-package cards.Necromancer.Base;
+package cards.Necromancer.Power;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import cards.Necromancer.Base.Defend_Necromancer;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import powers.TestPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class UndyingResentment extends CustomCard {
-    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:UndyingResentment");
+public class GetPower_Necromancer extends CustomCard {
+    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:GetPower_Necromancer");
 
-    public static final String ID = "SvTS:UndyingResentment";
+    public static final String ID = "SvTS:GetPower_Necromancer";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //------------------TODO---------------
-    public static final String IMG_PATH = "img/Necromancer/cards/Base/UndyingResentment.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Power/shadowverse.png";
 
 
     private static final int COST = 1;
-    private static final int BASE_DMG = 5 + 3;
-    private static final int UPGRADE_PLUS_DMG = 2 + 3;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     private static final CardColor COLOR = SvTS_Necromancer_Color;
-    private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
-
-
-    public UndyingResentment(){
+    public GetPower_Necromancer(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.damage = this.baseDamage = BASE_DMG;
-
         //------------------TODO---------------
     }
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
+        addToBot(new ApplyPowerAction(Player, Player, new TestPower(Player, 1)));
     }
 
     @Override
     public void upgrade(){
         if(!this.upgraded){
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeBaseCost(0);
         }
     }
 
     @Override
+    public boolean isDefend(){
+        return true;
+    }
+
+    @Override
     public AbstractCard makeCopy(){
-        return new UndyingResentment();
+        return new GetPower_Necromancer();
     }
 }

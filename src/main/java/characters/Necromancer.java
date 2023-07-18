@@ -1,5 +1,6 @@
 package characters;
 
+import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -36,23 +37,34 @@ public class Necromancer extends CustomPlayer {
     private static final String SHOULDER_1_PATH = "img/Necromancer/character/Shoulder1.png";
     private static final String SHOULDER_2_PATH = "img/Necromancer/character/Shoulder2.png";
     private static final String CORPSE_PATH = "img/Necromancer/character/Corpse.png";
-    private static final String ORB_VFX = "img/Necromancer/UI/orb/vfx.png";
+    private static final String ORB_VFX = "img/Necromancer/UI/orb/Layer_Blank.png";
 
     public static final Color NECROMANCER_COLOR = CardHelper.getColor(200, 20, 200);
     // 战斗界面左下角能量图标的每个图层
     private static final String[] ORB_TEXTURES = new String[]{
-            "img/Necromancer/UI/orb/Layer.png"
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png",
+            "img/Necromancer/UI/orb/Layer_Blank.png"
+
     };
 
     // 每个图层的旋转速度
-    private static final float[] LAYER_SPEED = new float[]{0.0F};
+    private static final float[] LAYER_SPEED = null;//new float[]{0.0F};
     // 人物的本地化文本，如卡牌的本地化文本一样，如何书写见下
     private static final CharacterStrings CHARACTERSTRINGS = CardCrawlGame.languagePack.getCharacterString("SvTS:Necromancer");
 
 
 
     public Necromancer(String Name){
-        super(Name, SvTSClassEnum.SvTS_Necromancer_CLASS, ORB_TEXTURES, ORB_VFX, LAYER_SPEED, null, null);
+        super(Name, SvTSClassEnum.SvTS_Necromancer_CLASS, new CustomEnergyOrb(ORB_TEXTURES, ORB_VFX, null), null, null);
         // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
         this.dialogY = (this.drawY + 150.0F * Settings.scale);
@@ -62,7 +74,7 @@ public class Necromancer extends CustomPlayer {
                 CORPSE_PATH, // 人物死亡图像
                 this.getLoadout(),
                 0.0F, 0.0F,
-                200.0F, 220.0F, // 人物碰撞箱大小，越大的人物模型这个越大
+                250.0F, 294.0F, // 人物碰撞箱大小，越大的人物模型这个越大
                 new EnergyManager(ENERGY_PER_TURN) // 初始每回合的能量
         );
     }
@@ -158,9 +170,9 @@ public class Necromancer extends CustomPlayer {
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
 
-    public void updateOrb(int OrbCount){
-        this.energyOrb.updateOrb(OrbCount);
-    }
+//    public void updateOrb(int OrbCount){
+//        this.energyOrb.updateOrb(OrbCount);
+//    }
 
     // 自定义模式选择你的人物时播放的音效
     @Override
@@ -179,7 +191,6 @@ public class Necromancer extends CustomPlayer {
             return CHARACTERSTRINGS.NAMES[0];
         }
     }
-
     // 碎心图片
     @Override
     public ArrayList<CutscenePanel> getCutscenePanels() {

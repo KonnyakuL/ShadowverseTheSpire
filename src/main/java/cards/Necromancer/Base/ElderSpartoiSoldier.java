@@ -18,7 +18,7 @@ public class ElderSpartoiSoldier extends CustomCard {
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //-----------------------------TODO------------------------
-    public static final String IMG_PATH = "img/Necromancer/cards/Strike_Necromancer.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Base/ElderSpartoiSoldier.png";
 
 
     private static final int COST = 2;

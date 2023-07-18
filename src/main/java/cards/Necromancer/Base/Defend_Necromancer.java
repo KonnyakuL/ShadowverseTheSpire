@@ -17,7 +17,7 @@ public class Defend_Necromancer extends CustomCard {
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //------------------TODO---------------
-    public static final String IMG_PATH = "img/Necromancer/cards/Defend_Necromancer.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Base/Defend_Necromancer.png";
 
 
     private static final int COST = 1;

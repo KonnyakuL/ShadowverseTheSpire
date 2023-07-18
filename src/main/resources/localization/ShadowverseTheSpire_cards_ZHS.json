@@ -1,4 +1,40 @@
 {
+  "SvTS:Test_Common_Attack_Necromancer": {
+    "NAME": "Common1",
+    "DESCRIPTION": "你是怎么搞到这张卡的？ NL 给予 !M! 层 破坏 一张卡"
+  },
+  "SvTS:Test_Common_Attack2_Necromancer": {
+    "NAME": "Common2",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
+  "SvTS:Test_Common_Attack3_Necromancer": {
+    "NAME": "Common3",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
+  "SvTS:Test_Uncommon_Attack_Necromancer": {
+    "NAME": "Uncommon1",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
+  "SvTS:Test_Uncommon_Attack2_Necromancer": {
+    "NAME": "Uncommon2",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
+  "SvTS:Test_Uncommon_Attack3_Necromancer": {
+    "NAME": "Uncommon3",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
+  "SvTS:Test_Rare_Attack_Necromancer": {
+    "NAME": "Rare1",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
+  "SvTS:Test_Rare_Attack2_Necromancer": {
+    "NAME": "Rare2",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
+  "SvTS:Test_Rare_Attack3_Necromancer": {
+    "NAME": "Rare3",
+    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  },
   "SvTS:Strike_Necromancer": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害"
@@ -14,5 +50,9 @@
   "SvTS:UndyingResentment": {
     "NAME": "不灭的怨念",
     "DESCRIPTION": "造成 !D! 点伤害"
+  },
+  "SvTS:GetPower_Necromancer": {
+    "NAME": "获得测试能力",
+    "DESCRIPTION": "获得测试能力 NL 你是怎么搞到这张卡的？"
   }
 }
