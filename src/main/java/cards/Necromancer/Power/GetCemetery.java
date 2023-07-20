@@ -14,10 +14,10 @@ import powers.TestPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class GetPower_Necromancer extends CustomCard {
-    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:GetPower_Necromancer");
+public class GetCemetery extends CustomCard {
+    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:GetCemetery");
 
-    public static final String ID = "SvTS:GetPower_Necromancer";
+    public static final String ID = "SvTS:GetCemetery";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //------------------TODO---------------
@@ -30,7 +30,7 @@ public class GetPower_Necromancer extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    public GetPower_Necromancer(){
+    public GetCemetery(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         //------------------TODO---------------
     }
@@ -55,6 +55,6 @@ public class GetPower_Necromancer extends CustomCard {
 
     @Override
     public AbstractCard makeCopy(){
-        return new GetPower_Necromancer();
+        return new GetCemetery();
     }
 }

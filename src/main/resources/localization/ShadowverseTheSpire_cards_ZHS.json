@@ -54,5 +54,9 @@
   "SvTS:GetPower_Necromancer": {
     "NAME": "获得测试能力",
     "DESCRIPTION": "获得测试能力 NL 你是怎么搞到这张卡的？"
+  },
+  "SvTS:GetCemetery": {
+    "NAME": "获得墓地",
+    "DESCRIPTION": "获得墓地`"
   }
 }

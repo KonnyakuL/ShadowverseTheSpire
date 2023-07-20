@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import pathes.SvTSClassEnum;
@@ -79,6 +80,10 @@ public class Necromancer extends CustomPlayer {
         );
     }
 
+    public void useCard(AbstractCard c, AbstractMonster monster, int energyOnUse){
+        super.useCard(c, monster, energyOnUse);
+    }
+
     @Override
     public ArrayList<String> getStartingDeck(){
         ArrayList<String> retVal = new ArrayList<>();
@@ -94,6 +99,7 @@ public class Necromancer extends CustomPlayer {
         retVal.add("SvTS:Defend_Necromancer");
         retVal.add("SvTS:ElderSpartoiSoldier");
         retVal.add("SvTS:UndyingResentment");
+        retVal.add("SvTS:GetCemetery");
         System.out.println("初始牌组加载完毕");
         return retVal;
     }

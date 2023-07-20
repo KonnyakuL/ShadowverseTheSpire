@@ -7,6 +7,7 @@ import cards.Necromancer.Base.Defend_Necromancer;
 import cards.Necromancer.Base.ElderSpartoiSoldier;
 import cards.Necromancer.Base.Strike_Necromancer;
 import cards.Necromancer.Base.UndyingResentment;
+import cards.Necromancer.Power.GetCemetery;
 import cards.Necromancer.Power.GetPower_Necromancer;
 import characters.Necromancer;
 import com.badlogic.gdx.Gdx;
@@ -90,6 +91,7 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addCard(new ElderSpartoiSoldier());
         BaseMod.addCard(new UndyingResentment());
         BaseMod.addCard(new GetPower_Necromancer());
+        BaseMod.addCard(new GetCemetery());
     }
 
     @Override

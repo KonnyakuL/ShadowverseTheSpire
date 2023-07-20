@@ -21,7 +21,7 @@ public class Lunas_Friend extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart(){
+    public void atTurnStart(){
         this.counter = 1;
     }
 

@@ -4,5 +4,11 @@
     "DESCRIPTIONS": [
       "当你受到 #y违背格挡 的攻击伤害时，恢复 #b%d 点生命。"
     ]
+  },
+  "SvTS:Cemetery": {
+    "NAME": "墓地",
+    "DESCRIPTIONS": [
+      "拥有 #b%d 点墓地"
+    ]
   }
 }
