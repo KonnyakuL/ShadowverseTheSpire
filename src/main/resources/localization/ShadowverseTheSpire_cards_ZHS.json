@@ -44,12 +44,16 @@
     "DESCRIPTION": "获得 !B! 点格挡"
   },
   "SvTS:ElderSpartoiSoldier": {
-    "NAME": "腐朽的骷髅兵",
+    "NAME": "腐朽的骸骨兵",
     "DESCRIPTION": "造成 !D! 点伤害"
   },
   "SvTS:UndyingResentment": {
     "NAME": "不灭的怨念",
-    "DESCRIPTION": "造成 !D! 点伤害"
+    "DESCRIPTION": "造成 !D! 点伤害 NL 唤灵 (4):造成4点伤害"
+  },
+  "SvTS:SkeletonOgre": {
+    "NAME": "骸骨巨魔",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 唤灵 (4):下次使用造成的伤害+3"
   },
   "SvTS:GetPower_Necromancer": {
     "NAME": "获得测试能力",
@@ -58,5 +62,37 @@
   "SvTS:GetCemetery": {
     "NAME": "获得墓地",
     "DESCRIPTION": "获得墓地`"
+  },
+  "SvTS:BurialGrounds": {
+    "NAME": "集体埋葬地",
+    "DESCRIPTION": "回合结束时，自己的墓地+1"
+  },
+  "SvTS:Ghost": {
+    "NAME": "怨灵",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 消失 NL 虚无"
+  },
+  "SvTS:GhoulsBanquet": {
+    "NAME": "亡者的盛宴",
+    "DESCRIPTION": "每当自己发动 唤灵 时，增加一张怨灵到手中"
+  },
+  "SvTS:SkeletonViper": {
+    "NAME": "骸骨巨蛇",
+    "DESCRIPTION": "获得 !B! 点格挡 NL 唤灵 (4):获得4点格挡"
+  },
+  "SvTS:FoulTempest": {
+    "NAME": "腐坏飓风",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 NL 唤灵 (6):改为造成 !M! 点伤害"
+  },
+  "SvTS:PhantomHowl": {
+    "NAME": "幻影之啸",
+    "DESCRIPTION": "「 唤灵 (1):增加一张怨灵到手中」重复此动作直至手牌数上限或墓地耗尽"
+  },
+  "SvTS:LordAtomy": {
+    "NAME": "骨骸王",
+    "DESCRIPTION": "只要自己手牌张数为9张，这张卡花费-5 NL 造成 !D! 点伤害， 破坏 自己所有手牌 NL 消耗"
+  },
+  "SvTS:Cerberus": {
+    "NAME": "凯尔贝洛斯",
+    "DESCRIPTION": ""
   }
 }

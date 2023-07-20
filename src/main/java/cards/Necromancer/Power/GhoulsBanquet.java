@@ -1,40 +1,42 @@
 package cards.Necromancer.Power;
 
 import basemod.abstracts.CustomCard;
+import cards.Necromancer.Attack.Ghost;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import powers.Cemetery;
+import powers.Power_GhoulsBanquet;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class GetPower_Necromancer extends CustomCard {
-    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:GetPower_Necromancer");
+public class GhoulsBanquet extends CustomCard {
+    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:GhoulsBanquet");
 
-    public static final String ID = "SvTS:GetPower_Necromancer";
+    public static final String ID = "SvTS:GhoulsBanquet";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //------------------TODO---------------
-    public static final String IMG_PATH = "img/Necromancer/cards/Power/shadowverse.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Power/GhoulsBanquet.png";
 
 
     private static final int COST = 1;
     private static final CardType TYPE = CardType.POWER;
     private static final CardColor COLOR = SvTS_Necromancer_Color;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    public GetPower_Necromancer(){
+    public GhoulsBanquet(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.cardsToPreview = new Ghost();
         //------------------TODO---------------
     }
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
-        addToBot(new ApplyPowerAction(Player, Player, new Cemetery(Player, 1)));
+        addToBot(new ApplyPowerAction(Player, Player, new Power_GhoulsBanquet(Player, -1)));
     }
 
     @Override
@@ -47,6 +49,6 @@ public class GetPower_Necromancer extends CustomCard {
 
     @Override
     public AbstractCard makeCopy(){
-        return new GetPower_Necromancer();
+        return new GhoulsBanquet();
     }
 }

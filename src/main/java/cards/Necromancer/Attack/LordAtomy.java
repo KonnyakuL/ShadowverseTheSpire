@@ -11,31 +11,29 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Test_Common_Attack_Necromancer extends CustomCard {
-    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Test_Common_Attack_Necromancer");
+public class LordAtomy extends CustomCard {
+    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:LordAtomy");
 
-    public static final String ID = "SvTS:Test_Common_Attack_Necromancer";
+    public static final String ID = "SvTS:LordAtomy";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //-----------------------------TODO------------------------
-    public static final String IMG_PATH = "img/Necromancer/cards/Attack/shadowverse.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Attack/LordAtomy.png";
 
-
-    private static final int COST = 1;
-    private static final int BASE_DMG = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int COST = 5;
+    private static final int BASE_DMG = 48;
+    private static final int UPGRADE_PLUS_DMG = 12;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = SvTS_Necromancer_Color;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
 
-
-    public Test_Common_Attack_Necromancer(){
+    public LordAtomy(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.damage = this.baseDamage = BASE_DMG;
+        this.baseDamage = BASE_DMG;
+        this.damage = this.baseDamage;
         this.exhaust = true;
-        this.isEthereal = true;
         //-----------------TODO----------------------
     }
 
@@ -46,7 +44,7 @@ public class Test_Common_Attack_Necromancer extends CustomCard {
 
     @Override
     public AbstractCard makeCopy(){
-        return new Test_Common_Attack_Necromancer();
+        return new LordAtomy();
     }
 
     @Override
@@ -56,4 +54,5 @@ public class Test_Common_Attack_Necromancer extends CustomCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
+
 }

@@ -10,5 +10,17 @@
     "DESCRIPTIONS": [
       "拥有 #b%d 点墓地"
     ]
+  },
+  "SvTS:Power_BurialGrounds": {
+    "NAME": "集体埋葬地",
+    "DESCRIPTIONS": [
+      "回合结束时，自己的墓地+%d"
+    ]
+  },
+  "SvTS:Power_GhoulsBanquet": {
+    "NAME": "亡者的盛宴",
+    "DESCRIPTIONS": [
+      "每当自己发动 唤灵 时，增加一张怨灵到手中"
+    ]
   }
 }

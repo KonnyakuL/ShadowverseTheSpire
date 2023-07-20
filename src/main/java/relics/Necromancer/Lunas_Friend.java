@@ -1,7 +1,7 @@
 package relics.Necromancer;
 
+import actions.GainCemetery;
 import basemod.abstracts.CustomRelic;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,7 +31,7 @@ public class Lunas_Friend extends CustomRelic {
             this.counter = 0;
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+            addToBot(new GainCemetery(AbstractDungeon.player, AbstractDungeon.player, 1));
         }
     }
 

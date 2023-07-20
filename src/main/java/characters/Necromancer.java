@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import pathes.SvTSClassEnum;
+import powers.Cemetery;
 
 import java.util.ArrayList;
 
@@ -56,12 +57,10 @@ public class Necromancer extends CustomPlayer {
             "img/Necromancer/UI/orb/Layer_Blank.png"
 
     };
-
     // 每个图层的旋转速度
     private static final float[] LAYER_SPEED = null;//new float[]{0.0F};
     // 人物的本地化文本，如卡牌的本地化文本一样，如何书写见下
     private static final CharacterStrings CHARACTERSTRINGS = CardCrawlGame.languagePack.getCharacterString("SvTS:Necromancer");
-
 
 
     public Necromancer(String Name){
@@ -82,6 +81,9 @@ public class Necromancer extends CustomPlayer {
 
     public void useCard(AbstractCard c, AbstractMonster monster, int energyOnUse){
         super.useCard(c, monster, energyOnUse);
+        if(!hasPower("SvTS:Cemetery")){
+            this.powers.add(new Cemetery(this, 0));
+        }
     }
 
     @Override
@@ -114,8 +116,8 @@ public class Necromancer extends CustomPlayer {
 
     @Override
     public CharSelectInfo getLoadout(){
-        String title = "";
-        String flavor = "";
+        String title;
+        String flavor;
         if(Settings.language == Settings.GameLanguage.ZHS){
             title = CHARACTERSTRINGS.NAMES[0];
             flavor = CHARACTERSTRINGS.TEXT[0];

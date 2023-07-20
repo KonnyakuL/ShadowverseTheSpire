@@ -7,8 +7,13 @@ import cards.Necromancer.Base.Defend_Necromancer;
 import cards.Necromancer.Base.ElderSpartoiSoldier;
 import cards.Necromancer.Base.Strike_Necromancer;
 import cards.Necromancer.Base.UndyingResentment;
+import cards.Necromancer.Power.BurialGrounds;
 import cards.Necromancer.Power.GetCemetery;
 import cards.Necromancer.Power.GetPower_Necromancer;
+import cards.Necromancer.Power.GhoulsBanquet;
+import cards.Necromancer.Skill.FoulTempest;
+import cards.Necromancer.Skill.PhantomHowl;
+import cards.Necromancer.Skill.SkeletonViper;
 import characters.Necromancer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -38,7 +43,7 @@ import static pathes.SvTSClassEnum.SvTS_Necromancer_CLASS;
 public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber {
 
     // 人物选择界面按钮的图片
-    private static final String NECROMANCER_CHOOSE_BUTTON = "img/Necromancer/character/SelesButton.png";
+    private static final String NECROMANCER_CHOOSE_BUTTON = "img/Necromancer/character/Character_Button.png";
     // 人物选择界面的立绘
     private static final String NECROMANCER_CHOOSE_PORTRAIT = "img/Necromancer/character/Luna.png";
     // 攻击牌的背景（小尺寸）
@@ -92,6 +97,14 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addCard(new UndyingResentment());
         BaseMod.addCard(new GetPower_Necromancer());
         BaseMod.addCard(new GetCemetery());
+        BaseMod.addCard(new SkeletonOgre());
+        BaseMod.addCard(new BurialGrounds());
+        BaseMod.addCard(new Ghost());
+        BaseMod.addCard(new GhoulsBanquet());
+        BaseMod.addCard(new SkeletonViper());
+        BaseMod.addCard(new FoulTempest());
+        BaseMod.addCard(new PhantomHowl());
+        BaseMod.addCard(new LordAtomy());
     }
 
     @Override
