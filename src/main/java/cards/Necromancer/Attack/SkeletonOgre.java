@@ -1,7 +1,7 @@
 package cards.Necromancer.Attack;
 
 import actions.Necromancy;
-import basemod.abstracts.CustomCard;
+import cards.AbstractCustomCard;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class SkeletonOgre extends CustomCard {
+public class SkeletonOgre extends AbstractCustomCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:SkeletonOgre");
 
     public static final String ID = "SvTS:SkeletonOgre";
@@ -54,6 +54,7 @@ public class SkeletonOgre extends CustomCard {
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
+        isUsed = true;
         addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
         if(AbleToNecromancy(Player, NECROMANCY)){
             this.baseDamage += 3;

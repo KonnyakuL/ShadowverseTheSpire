@@ -1,6 +1,6 @@
 package cards.Necromancer.Power;
 
-import basemod.abstracts.CustomCard;
+import cards.AbstractCustomCard;
 import cards.Necromancer.Attack.Ghost;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,9 +10,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import powers.Power_GhoulsBanquet;
 
+import java.util.ArrayList;
+
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class GhoulsBanquet extends CustomCard {
+public class GhoulsBanquet extends AbstractCustomCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:GhoulsBanquet");
 
     public static final String ID = "SvTS:GhoulsBanquet";
@@ -20,7 +22,6 @@ public class GhoulsBanquet extends CustomCard {
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //------------------TODO---------------
     public static final String IMG_PATH = "img/Necromancer/cards/Power/GhoulsBanquet.png";
-
 
     private static final int COST = 1;
     private static final CardType TYPE = CardType.POWER;
@@ -36,6 +37,7 @@ public class GhoulsBanquet extends CustomCard {
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
+        isUsed = true;
         addToBot(new ApplyPowerAction(Player, Player, new Power_GhoulsBanquet(Player, -1)));
     }
 

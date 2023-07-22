@@ -101,7 +101,6 @@ public class Necromancer extends CustomPlayer {
         retVal.add("SvTS:Defend_Necromancer");
         retVal.add("SvTS:ElderSpartoiSoldier");
         retVal.add("SvTS:UndyingResentment");
-        retVal.add("SvTS:GetCemetery");
         System.out.println("初始牌组加载完毕");
         return retVal;
     }

@@ -1,10 +1,8 @@
-package cards.Necromancer.Base;
+package cards.Necromancer.Attack;
 
-import actions.GainCemetery;
 import cards.AbstractCustomCard;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,50 +11,53 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class ElderSpartoiSoldier extends AbstractCustomCard {
-    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:ElderSpartoiSoldier");
+public class Coco extends AbstractCustomCard {
+    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Coco");
 
-    public static final String ID = "SvTS:ElderSpartoiSoldier";
+    public static final String ID = "SvTS:Coco";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
     //-----------------------------TODO------------------------
-    public static final String IMG_PATH = "img/Necromancer/cards/Base/ElderSpartoiSoldier.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Attack/Coco.png";
 
-
-    private static final int COST = 2;
-    private static final int BASE_DMG = 11;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int COST = 0;
+    private static final int BASE_HEAL = 2;
+    private static final int UPGRADE_PLUS_HEAL = 1;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = SvTS_Necromancer_Color;
-    private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
 
-
-    public ElderSpartoiSoldier(){
+    public Coco(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.damage = this.baseDamage = BASE_DMG;
+        this.baseMagicNumber = this.magicNumber = this.heal = this.baseHeal = BASE_HEAL;
+        this.exhaust = true;
         //-----------------TODO----------------------
-
     }
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
-        addToBot(new GainCemetery(AbstractDungeon.player, AbstractDungeon.player, 2));
+    }
+
+    public void triggerOnExhaust(){
+        addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.heal));
+        super.triggerOnExhaust();
     }
 
     @Override
     public AbstractCard makeCopy(){
-        return new ElderSpartoiSoldier();
+        return new Coco();
     }
 
     @Override
     public void upgrade(){
         if(!this.upgraded){
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            this.heal += UPGRADE_PLUS_HEAL;
+            upgradeMagicNumber(UPGRADE_PLUS_HEAL);
         }
     }
+
 }

@@ -1,7 +1,8 @@
 package cards.Necromancer.Base;
 
 import actions.Necromancy;
-import basemod.abstracts.CustomCard;
+import cards.AbstractCustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class UndyingResentment extends CustomCard {
+public class UndyingResentment extends AbstractCustomCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:UndyingResentment");
 
     public static final String ID = "SvTS:UndyingResentment";
@@ -43,8 +44,9 @@ public class UndyingResentment extends CustomCard {
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
-        addToBot(new Necromancy(Player, NECROMANCY, new DamageAction(Monster, new DamageInfo(Player, NECROMANCY_DMG, this.damageTypeForTurn))));
+        isUsed = true;
+        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        addToBot(new Necromancy(Player, NECROMANCY, new DamageAction(Monster, new DamageInfo(Player, NECROMANCY_DMG, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL)));
     }
 
     @Override

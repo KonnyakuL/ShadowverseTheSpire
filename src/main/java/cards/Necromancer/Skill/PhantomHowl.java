@@ -1,7 +1,7 @@
 package cards.Necromancer.Skill;
 
 import actions.Necromancy;
-import basemod.abstracts.CustomCard;
+import cards.AbstractCustomCard;
 import cards.Necromancer.Attack.Ghost;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class PhantomHowl extends CustomCard {
+public class PhantomHowl extends AbstractCustomCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:PhantomHowl");
 
     public static final String ID = "SvTS:PhantomHowl";
@@ -27,11 +27,12 @@ public class PhantomHowl extends CustomCard {
     private static final int NECROMANCY = 1;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = SvTS_Necromancer_Color;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     public PhantomHowl(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.cardsToPreview = new Ghost();
         //------------------TODO---------------
     }
 
@@ -48,8 +49,13 @@ public class PhantomHowl extends CustomCard {
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
-        int number = Player.hand.size();
-        if(Player.hand.size() > GetNecromancy(Player)){
+        isUsed = true;
+        int number = 10 - Player.hand.size();
+
+        System.out.println("墓地");
+        System.out.println(GetNecromancy(Player));
+        System.out.println(number);
+        if(10 - Player.hand.size() > GetNecromancy(Player)){
             number = GetNecromancy(Player);
         }
         while(number-- > 0){

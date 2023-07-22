@@ -1,6 +1,7 @@
 package cards.Necromancer.Base;
 
-import basemod.abstracts.CustomCard;
+import cards.AbstractCustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Strike_Necromancer extends CustomCard {
+public class Strike_Necromancer extends AbstractCustomCard {
     //从.json文件中提取键名为 Strike_Necromancer 的信息
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Strike_Necromancer");
 
@@ -42,17 +43,13 @@ public class Strike_Necromancer extends CustomCard {
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
+        isUsed = true;
+        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
     @Override
     public AbstractCard makeCopy(){
         return new Strike_Necromancer();
-    }
-
-    @Override
-    public boolean isStrike(){
-        return true;
     }
 
     @Override

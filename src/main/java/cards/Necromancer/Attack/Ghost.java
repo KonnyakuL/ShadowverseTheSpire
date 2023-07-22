@@ -1,6 +1,6 @@
 package cards.Necromancer.Attack;
 
-import basemod.abstracts.CustomCard;
+import cards.AbstractCustomCard;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Ghost extends CustomCard {
+public class Ghost extends AbstractCustomCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Ghost");
 
     public static final String ID = "SvTS:Ghost";
@@ -40,6 +40,7 @@ public class Ghost extends CustomCard {
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
+        isUsed = true;
         addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
     }
 

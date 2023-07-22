@@ -2,6 +2,7 @@ package cards.Necromancer.Attack;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -48,15 +49,15 @@ public class Test_Rare_Attack_Necromancer extends CustomCard {
     }
 
     @Override
-    public boolean isStrike(){
-        return true;
-    }
-
-    @Override
     public void upgrade(){
         if(!this.upgraded){
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
+    }
+
+    @Override
+    public void triggerOnExhaust(){
+        addToBot(new DrawCardAction(2));
     }
 }

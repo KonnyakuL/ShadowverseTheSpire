@@ -31,12 +31,14 @@ public class Cemetery extends AbstractPower {
         this.updateDescription();
     }
 
+    @Override
     public void updateDescription() {
         this.description = String.format(DESCRIPTIONS[0], this.amount);
     }
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action){
-        if(card.cardID.equals("SvTS:Ghost")){
+        if(!card.cardID.equals("SvTS:Ghost")){
             this.amount++;
             updateDescription();
         }

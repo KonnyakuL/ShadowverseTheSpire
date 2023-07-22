@@ -1,6 +1,6 @@
 package cards.Necromancer.Base;
 
-import basemod.abstracts.CustomCard;
+import cards.AbstractCustomCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Defend_Necromancer extends CustomCard {
+public class Defend_Necromancer extends AbstractCustomCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Defend_Necromancer");
 
     public static final String ID = "SvTS:Defend_Necromancer";
@@ -39,6 +39,7 @@ public class Defend_Necromancer extends CustomCard {
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
+        isUsed = true;
         addToBot(new GainBlockAction(Player, Player, this.block));
     }
 
@@ -48,11 +49,6 @@ public class Defend_Necromancer extends CustomCard {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
         }
-    }
-
-    @Override
-    public boolean isDefend(){
-        return true;
     }
 
     @Override
