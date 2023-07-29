@@ -1,6 +1,7 @@
 package cards.Necromancer.Attack;
 
-import cards.AbstractCustomCard;
+import cards.SvTS_AbstractCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,13 +16,12 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import static org.apache.commons.lang3.math.NumberUtils.max;
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class LordAtomy extends AbstractCustomCard {
+public class LordAtomy extends SvTS_AbstractCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:LordAtomy");
 
     public static final String ID = "SvTS:LordAtomy";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    //-----------------------------TODO------------------------
     public static final String IMG_PATH = "img/Necromancer/cards/Attack/LordAtomy.png";
 
     private static final int COST = 5;
@@ -37,7 +37,9 @@ public class LordAtomy extends AbstractCustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = BASE_DMG;
         this.damage = this.baseDamage;
-        //-----------------TODO----------------------
+
+        this.tags.add(SvTS_Enums.Necromancer);
+        this.tags.add(SvTS_Enums.Classic);
     }
 
     public void update(){
@@ -56,7 +58,7 @@ public class LordAtomy extends AbstractCustomCard {
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
         addToBot(new ExhaustAction(AbstractDungeon.player.hand.size() - 1, true, true));
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
+        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
     @Override
@@ -69,6 +71,8 @@ public class LordAtomy extends AbstractCustomCard {
         if(!this.upgraded){
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            this.textureImg = "img/Necromancer/cards/Attack/LordAtomy_Evolved.png";
+            loadCardImage(this.textureImg);
         }
     }
 

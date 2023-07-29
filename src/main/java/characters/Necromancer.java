@@ -1,7 +1,6 @@
 package characters;
 
 import basemod.abstracts.CustomEnergyOrb;
-import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -26,7 +25,7 @@ import java.util.ArrayList;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Necromancer extends CustomPlayer {
+public class Necromancer extends SvTS_AbstractPlayer {
     private static final int ENERGY_PER_TURN = 3;
     private static final int STARTING_HP = 75;
     private static final int MAX_HP = 75;
@@ -79,11 +78,12 @@ public class Necromancer extends CustomPlayer {
         );
     }
 
+    @Override
     public void useCard(AbstractCard c, AbstractMonster monster, int energyOnUse){
-        super.useCard(c, monster, energyOnUse);
         if(!hasPower("SvTS:Cemetery")){
             this.powers.add(new Cemetery(this, 0));
         }
+        super.useCard(c, monster, energyOnUse);
     }
 
     @Override

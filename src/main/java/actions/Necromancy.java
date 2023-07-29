@@ -3,7 +3,6 @@ package actions;
 import cards.Necromancer.Attack.Ghost;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import powers.Cemetery;
@@ -31,7 +30,7 @@ public class Necromancy extends AbstractGameAction {
             addToBot(new ApplyPowerAction(this.target, this.target, new Cemetery(this.target, -this.amount)));
             addToBot(this.action);
             if(this.target.hasPower("SvTS:Power_GhoulsBanquet")){
-                addToBot(new MakeTempCardInHandAction(new Ghost()));
+                addToBot(new SvTS_MakeTempCardInHandAction(new Ghost()));
             }
         }
 

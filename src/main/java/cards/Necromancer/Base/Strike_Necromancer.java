@@ -1,6 +1,6 @@
 package cards.Necromancer.Base;
 
-import cards.AbstractCustomCard;
+import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,14 +12,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Strike_Necromancer extends AbstractCustomCard {
+public class Strike_Necromancer extends SvTS_AbstractCard {
     //从.json文件中提取键名为 Strike_Necromancer 的信息
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Strike_Necromancer");
 
     public static final String ID = "SvTS:Strike_Necromancer";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    //-----------------------------TODO------------------------
     public static final String IMG_PATH = "img/Necromancer/cards/Base/Strike_Necromancer.png";
 
 
@@ -37,8 +36,9 @@ public class Strike_Necromancer extends AbstractCustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = BASE_DMG;
         this.tags.add(CardTags.STARTER_STRIKE);
-        this.tags.add(CardTags.STRIKE);
-        //-----------------TODO----------------------
+
+        this.tags.add(SvTS_Enums.Necromancer);
+        this.tags.add(SvTS_Enums.Basic);
     }
 
     @Override

@@ -1,39 +1,7 @@
 {
-  "SvTS:Test_Common_Attack_Necromancer": {
-    "NAME": "Common1",
-    "DESCRIPTION": "你是怎么搞到这张卡的？ NL 给予 !M! 层 破坏 一张卡"
-  },
-  "SvTS:Test_Common_Attack2_Necromancer": {
-    "NAME": "Common2",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
-  },
-  "SvTS:Test_Common_Attack3_Necromancer": {
-    "NAME": "Common3",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
-  },
-  "SvTS:Test_Uncommon_Attack_Necromancer": {
-    "NAME": "Uncommon1",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
-  },
-  "SvTS:Test_Uncommon_Attack2_Necromancer": {
-    "NAME": "Uncommon2",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
-  },
-  "SvTS:Test_Uncommon_Attack3_Necromancer": {
-    "NAME": "Uncommon3",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
-  },
-  "SvTS:Test_Rare_Attack_Necromancer": {
-    "NAME": "Rare1",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
-  },
-  "SvTS:Test_Rare_Attack2_Necromancer": {
-    "NAME": "Rare2",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
-  },
-  "SvTS:Test_Rare_Attack3_Necromancer": {
-    "NAME": "Rare3",
-    "DESCRIPTION": "你是怎么搞到这张卡的？"
+  "SvTS:Test": {
+    "NAME": "TEST",
+    "DESCRIPTION": "亡者召还 6"
   },
   "SvTS:Strike_Necromancer": {
     "NAME": "打击",
@@ -53,15 +21,7 @@
   },
   "SvTS:SkeletonOgre": {
     "NAME": "骸骨巨魔",
-    "DESCRIPTION": "造成 !D! 点伤害 NL 唤灵 (4):下次使用造成的伤害+3"
-  },
-  "SvTS:GetPower_Necromancer": {
-    "NAME": "获得测试能力",
-    "DESCRIPTION": "获得测试能力 NL 你是怎么搞到这张卡的？"
-  },
-  "SvTS:GetCemetery": {
-    "NAME": "获得墓地",
-    "DESCRIPTION": "获得墓地"
+    "DESCRIPTION": "造成 !D! 点伤害 NL 唤灵 (4):这张卡牌造成的伤害+3"
   },
   "SvTS:BurialGrounds": {
     "NAME": "集体埋葬地",
@@ -98,14 +58,23 @@
   },
   "SvTS:Mimi": {
     "NAME": "米米",
-    "DESCRIPTION": "谢幕曲 :对所有敌人造成 !D! 点伤害 NL 消耗"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 NL 消耗"
   },
   "SvTS:Coco": {
     "NAME": "可可",
-    "DESCRIPTION": "谢幕曲 :回复自己 !M! 点生命 NL 消耗"
+    "DESCRIPTION": "回复自己 !M! 点生命 NL 消耗"
   },
-  "SvTS:Test_Common_Destroy": {
-    "NAME": "测试破坏",
-    "DESCRIPTION": "破坏 1张牌，抽1张牌"
+  "SvTS:DeathlyTyrant": {
+    "NAME": "骸龙暴君",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 唤灵 (20):改为造成 !M! 点伤害"
+  },
+  "SvTS:ImpiousResurrection": {
+    "NAME": "不洁重生",
+    "DESCRIPTION": "破坏 1张牌，增加1张 *巫妖 到手中",
+    "UPGRADE_DESCRIPTION": "破坏 1张牌，增加1张 *巫妖+ 到手中"
+  },
+  "SvTS:Lich": {
+    "NAME": "巫妖",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 消耗"
   }
 }

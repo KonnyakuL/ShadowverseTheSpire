@@ -37,7 +37,7 @@ public class Destroy extends AbstractGameAction {
                 this.isDone = true;
                 return;
             }
-            AbstractDungeon.gridSelectScreen.open(temp, this.number, CardCrawlGame.languagePack.getUIString("ExhaustAction").TEXT[0], false);
+            AbstractDungeon.gridSelectScreen.open(temp, this.number, String.format(CardCrawlGame.languagePack.getUIString("SvTS:Destroy").TEXT[0], this.number), false);
             tickDuration();
             return;
         }

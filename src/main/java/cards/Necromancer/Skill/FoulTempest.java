@@ -1,7 +1,7 @@
 package cards.Necromancer.Skill;
 
 import actions.Necromancy;
-import cards.AbstractCustomCard;
+import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,13 +13,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class FoulTempest extends AbstractCustomCard {
+public class FoulTempest extends SvTS_AbstractCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:FoulTempest");
 
     public static final String ID = "SvTS:FoulTempest";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    //------------------TODO---------------
     public static final String IMG_PATH = "img/Necromancer/cards/Skill/FoulTempest.png";
 
 
@@ -36,7 +35,9 @@ public class FoulTempest extends AbstractCustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = BASE_DMG;
         this.magicNumber = this.baseMagicNumber = 3 * this.damage;
-        //------------------TODO---------------
+
+        this.tags.add(SvTS_Enums.Necromancer);
+        this.tags.add(SvTS_Enums.Classic);
     }
 
     private boolean AbleToNecromancy(AbstractPlayer Player, int number){

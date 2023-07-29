@@ -21,8 +21,8 @@ public class Power_GhoulsBanquet extends AbstractPower {
 
         this.amount = Amount;
 
-        String path128 = "img/powers/Power_BurialGrounds_84.png";
-        String path48 = "img/powers/Power_BurialGrounds_32.png";
+        String path128 = "img/powers/Power_GhoulsBanquet_84.png";
+        String path48 = "img/powers/Power_GhoulsBanquet_32.png";
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
 

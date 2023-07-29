@@ -8,39 +8,40 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class SkeletonOgre extends SvTS_AbstractCard {
-    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:SkeletonOgre");
+public class DeathlyTyrant extends SvTS_AbstractCard {
+    private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:DeathlyTyrant");
 
-    public static final String ID = "SvTS:SkeletonOgre";
+    public static final String ID = "SvTS:DeathlyTyrant";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    public static final String IMG_PATH = "img/Necromancer/cards/Attack/SkeletonOgre.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Attack/DeathlyTyrant.png";
 
 
-    private static final int COST = 1;
-    private static final int BASE_DMG = 6;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int COST = 3;
+    private static final int BASE_DMG = 24;
+    private static final int UPGRADE_PLUS_DMG = 9;
+    private static final int BASE_MAGICNUMBER = 60;
+    private static final int UPGRADE_PLUS_MAGICNUMBER = 15;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = SvTS_Necromancer_Color;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int NECROMANCY = 4;
+    private static final int NECROMANCY = 20;
 
 
-    public SkeletonOgre(){
+    public DeathlyTyrant(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = BASE_DMG;
-        this.damage = this.baseDamage;
+        this.damage = this.baseDamage = BASE_DMG;
+        this.magicNumber = this.baseMagicNumber = BASE_MAGICNUMBER;
 
         this.tags.add(SvTS_Enums.Necromancer);
-        this.tags.add(SvTS_Enums.Wonderland_Dreams);
+        this.tags.add(SvTS_Enums.Classic);
     }
 
     private boolean AbleToNecromancy(AbstractPlayer Player, int number){
@@ -57,16 +58,17 @@ public class SkeletonOgre extends SvTS_AbstractCard {
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
         if(AbleToNecromancy(Player, NECROMANCY)){
-            this.baseDamage += 3;
+            addToBot(new Necromancy(Player, NECROMANCY, new DamageAction(Monster, new DamageInfo(Player, this.magicNumber, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY)));
         }
-        addToBot(new Necromancy(AbstractDungeon.player, NECROMANCY, null));
+        else {
+            addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
+        }
     }
 
     @Override
     public AbstractCard makeCopy(){
-        return new SkeletonOgre();
+        return new DeathlyTyrant();
     }
 
     @Override
@@ -74,8 +76,10 @@ public class SkeletonOgre extends SvTS_AbstractCard {
         if(!this.upgraded){
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            this.textureImg = "img/Necromancer/cards/Attack/SkeletonOgre_Evolved.png";
+            upgradeMagicNumber(UPGRADE_PLUS_MAGICNUMBER);
+            this.textureImg = "img/Necromancer/cards/Attack/DeathlyTyrant_Evolved.png";
             loadCardImage(this.textureImg);
+            initializeDescription();
         }
     }
 

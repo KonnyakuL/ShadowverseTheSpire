@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class Lunas_Friend extends CustomRelic {
     public static final String ID = "SvTS:Lunas_Friend";
-    //-----------TODO--------------
     private static final String IMG_PATH = "img/Necromancer/relics/Lunas_Friend.png";
     private static final String IMG_OTL_PATH = "img/Necromancer/relics/Lunas_Friend.png";
     private static final RelicTier TIER = RelicTier.STARTER;

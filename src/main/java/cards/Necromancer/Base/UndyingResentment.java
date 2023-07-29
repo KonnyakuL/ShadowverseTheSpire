@@ -1,7 +1,7 @@
 package cards.Necromancer.Base;
 
 import actions.Necromancy;
-import cards.AbstractCustomCard;
+import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,13 +13,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class UndyingResentment extends AbstractCustomCard {
+public class UndyingResentment extends SvTS_AbstractCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:UndyingResentment");
 
     public static final String ID = "SvTS:UndyingResentment";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    //------------------TODO---------------
     public static final String IMG_PATH = "img/Necromancer/cards/Base/UndyingResentment.png";
 
 
@@ -39,7 +38,8 @@ public class UndyingResentment extends AbstractCustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = BASE_DMG;
 
-        //------------------TODO---------------
+        this.tags.add(SvTS_Enums.Necromancer);
+        this.tags.add(SvTS_Enums.Basic);
     }
 
     @Override

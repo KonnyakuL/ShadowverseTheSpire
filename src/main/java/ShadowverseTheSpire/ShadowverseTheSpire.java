@@ -3,16 +3,9 @@ package ShadowverseTheSpire;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import cards.Necromancer.Attack.*;
-import cards.Necromancer.Base.Defend_Necromancer;
-import cards.Necromancer.Base.ElderSpartoiSoldier;
-import cards.Necromancer.Base.Strike_Necromancer;
-import cards.Necromancer.Base.UndyingResentment;
-import cards.Necromancer.Power.BurialGrounds;
-import cards.Necromancer.Power.GhoulsBanquet;
-import cards.Necromancer.Skill.FoulTempest;
-import cards.Necromancer.Skill.PhantomHowl;
-import cards.Necromancer.Skill.SkeletonViper;
-import cards.Necromancer.Skill.Test_Common_Destroy;
+import cards.Necromancer.Base.*;
+import cards.Necromancer.Power.*;
+import cards.Necromancer.Skill.*;
 import characters.Necromancer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -81,18 +74,7 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
 
     @Override
     public void receiveEditCards() {
-//        BaseMod.addCard(new Test_Common_Attack_Necromancer());
-//        BaseMod.addCard(new Test_Common_Attack2_Necromancer());
-//        BaseMod.addCard(new Test_Common_Attack3_Necromancer());
-//        BaseMod.addCard(new Test_Uncommon_Attack_Necromancer());
-//        BaseMod.addCard(new Test_Uncommon_Attack2_Necromancer());
-//        BaseMod.addCard(new Test_Uncommon_Attack3_Necromancer());
-//        BaseMod.addCard(new Test_Rare_Attack_Necromancer());
-//        BaseMod.addCard(new Test_Rare_Attack2_Necromancer());
-//        BaseMod.addCard(new Test_Rare_Attack3_Necromancer());
-        BaseMod.addCard(new Test_Common_Destroy());
-//        BaseMod.addCard(new GetPower_Necromancer());
-//        BaseMod.addCard(new GetCemetery());
+        BaseMod.addCard(new Test());
         BaseMod.addCard(new Strike_Necromancer());
         BaseMod.addCard(new Defend_Necromancer());
         BaseMod.addCard(new ElderSpartoiSoldier());
@@ -108,6 +90,9 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addCard(new Cerberus());
         BaseMod.addCard(new Mimi());
         BaseMod.addCard(new Coco());
+        BaseMod.addCard(new DeathlyTyrant());
+        BaseMod.addCard(new ImpiousResurrection());
+        BaseMod.addCard(new Lich());
     }
 
     @Override
@@ -131,6 +116,7 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "localization/ShadowverseTheSpire_characters_" + lang + ".json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "localization/ShadowverseTheSpire_relics_" + lang + ".json");
         BaseMod.loadCustomStringsFile(PowerStrings.class, "localization/ShadowverseTheSpire_powers_" + lang + ".json");
+        BaseMod.loadCustomStringsFile(UIStrings.class, "localization/ShadowverseTheSpire_UI_" + lang + ".json");
     }
 
     @Override

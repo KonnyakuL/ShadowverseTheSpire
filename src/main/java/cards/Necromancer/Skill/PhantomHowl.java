@@ -1,9 +1,9 @@
 package cards.Necromancer.Skill;
 
 import actions.Necromancy;
-import cards.AbstractCustomCard;
+import actions.SvTS_MakeTempCardInHandAction;
+import cards.SvTS_AbstractCard;
 import cards.Necromancer.Attack.Ghost;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,13 +13,12 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class PhantomHowl extends AbstractCustomCard {
+public class PhantomHowl extends SvTS_AbstractCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:PhantomHowl");
 
     public static final String ID = "SvTS:PhantomHowl";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    //------------------TODO---------------
     public static final String IMG_PATH = "img/Necromancer/cards/Skill/PhantomHowl.png";
 
 
@@ -33,7 +32,9 @@ public class PhantomHowl extends AbstractCustomCard {
     public PhantomHowl(){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.cardsToPreview = new Ghost();
-        //------------------TODO---------------
+
+        this.tags.add(SvTS_Enums.Necromancer);
+        this.tags.add(SvTS_Enums.Classic);
     }
 
     private int GetNecromancy(AbstractPlayer Player){
@@ -59,7 +60,7 @@ public class PhantomHowl extends AbstractCustomCard {
             number = GetNecromancy(Player);
         }
         while(number-- > 0){
-            addToBot(new Necromancy(Player, NECROMANCY, new MakeTempCardInHandAction(new Ghost())));
+            addToBot(new Necromancy(Player, NECROMANCY, new SvTS_MakeTempCardInHandAction(new Ghost())));
         }
     }
 

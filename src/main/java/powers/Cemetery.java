@@ -1,5 +1,6 @@
 package powers;
 
+import cards.SvTS_AbstractCard;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,7 +39,7 @@ public class Cemetery extends AbstractPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action){
-        if(!card.cardID.equals("SvTS:Ghost")){
+        if(!card.hasTag(SvTS_AbstractCard.SvTS_Enums.Banish)){
             this.amount++;
             updateDescription();
         }

@@ -1,10 +1,13 @@
 package cards.Necromancer.Attack;
 
-import cards.AbstractCustomCard;
+import actions.SvTS_MakeTempCardInHandAction;
+import cards.Necromancer.Skill.Coco;
+import cards.Necromancer.Skill.Mimi;
+import cards.SvTS_AbstractCard;
 import com.badlogic.gdx.Gdx;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,13 +19,12 @@ import java.util.ArrayList;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Cerberus extends AbstractCustomCard {
+public class Cerberus extends SvTS_AbstractCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Cerberus");
 
     public static final String ID = "SvTS:Cerberus";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    //-----------------------------TODO------------------------
     public static final String IMG_PATH = "img/Necromancer/cards/Attack/Cerberus.png";
 
     private static final int COST = 2;
@@ -42,7 +44,9 @@ public class Cerberus extends AbstractCustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.block = this.baseBlock = BASE_BLOCK;
         this.damage = this.baseDamage = BASE_DMG;
-        //-----------------TODO----------------------
+
+        this.tags.add(SvTS_Enums.Necromancer);
+        this.tags.add(SvTS_Enums.Classic);
     }
 
     public static ArrayList<AbstractCard> PreviewList(){
@@ -76,9 +80,9 @@ public class Cerberus extends AbstractCustomCard {
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
         addToBot(new GainBlockAction(Player, this.block));
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
-        addToBot(new MakeTempCardInHandAction(new Mimi()));
-        addToBot(new MakeTempCardInHandAction(new Coco()));
+        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        addToBot(new SvTS_MakeTempCardInHandAction(new Mimi()));
+        addToBot(new SvTS_MakeTempCardInHandAction(new Coco()));
     }
 
     @Override
@@ -92,6 +96,8 @@ public class Cerberus extends AbstractCustomCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.textureImg = "img/Necromancer/cards/Attack/Cerberus_Evolved.png";
+            loadCardImage(this.textureImg);
             this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

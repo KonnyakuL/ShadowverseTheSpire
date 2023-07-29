@@ -1,6 +1,7 @@
 package cards.Necromancer.Attack;
 
-import cards.AbstractCustomCard;
+import cards.SvTS_AbstractCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,13 +12,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class Ghost extends AbstractCustomCard {
+public class Ghost extends SvTS_AbstractCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:Ghost");
 
     public static final String ID = "SvTS:Ghost";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    //-----------------------------TODO------------------------
     public static final String IMG_PATH = "img/Necromancer/cards/Attack/Ghost.png";
 
     private static final int COST = 0;
@@ -35,13 +35,15 @@ public class Ghost extends AbstractCustomCard {
         this.damage = this.baseDamage;
         this.exhaust = true;
         this.isEthereal = true;
-        //-----------------TODO----------------------
+
+        this.tags.add(SvTS_Enums.Necromancer);
+        this.tags.add(SvTS_Enums.Banish);
     }
 
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
-        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn)));
+        addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
 
     @Override
@@ -54,6 +56,8 @@ public class Ghost extends AbstractCustomCard {
         if(!this.upgraded){
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            this.textureImg = "img/Necromancer/cards/Attack/Ghost_Evolved.png";
+            loadCardImage(this.textureImg);
         }
     }
 
