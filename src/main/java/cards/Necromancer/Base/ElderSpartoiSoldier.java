@@ -44,6 +44,8 @@ public class ElderSpartoiSoldier extends SvTS_AbstractCard {
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
+//        addToBot(new SFXAction("SvTS:Test"));
+
         addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
         addToBot(new GainCemetery(AbstractDungeon.player, AbstractDungeon.player, 2));
     }

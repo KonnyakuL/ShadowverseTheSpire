@@ -22,5 +22,11 @@
     "DESCRIPTIONS": [
       "每当自己发动 唤灵 时，增加一张怨灵到手中"
     ]
+  },
+  "SvTS:Power_SpectralSorceress": {
+    "NAME": "幽灵之友",
+    "DESCRIPTIONS": [
+      "本回合中卡牌消失时，自己的墓地+1"
+    ]
   }
 }

@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.interfaces.*;
 import cards.Necromancer.Attack.*;
 import cards.Necromancer.Base.*;
+import cards.Necromancer.Heroes_of_Rivenbrandt.*;
 import cards.Necromancer.Power.*;
 import cards.Necromancer.Skill.*;
 import characters.Necromancer;
@@ -32,7 +33,7 @@ import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 import static pathes.SvTSClassEnum.SvTS_Necromancer_CLASS;
 
 @SpireInitializer
-public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber {
+public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySubscriber, PostExhaustSubscriber, PostBattleSubscriber, PostDungeonInitializeSubscriber, EditCharactersSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, EditStringsSubscriber, OnCardUseSubscriber, EditKeywordsSubscriber, OnPowersModifiedSubscriber, PostDrawSubscriber, PostEnergyRechargeSubscriber, AddAudioSubscriber {
 
     // 人物选择界面按钮的图片
     private static final String NECROMANCER_CHOOSE_BUTTON = "img/Necromancer/character/Character_Button.png";
@@ -75,6 +76,7 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new Test());
+        //---------------TODO---------------
         BaseMod.addCard(new Strike_Necromancer());
         BaseMod.addCard(new Defend_Necromancer());
         BaseMod.addCard(new ElderSpartoiSoldier());
@@ -93,6 +95,25 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addCard(new DeathlyTyrant());
         BaseMod.addCard(new ImpiousResurrection());
         BaseMod.addCard(new Lich());
+
+        BaseMod.addCard(new BlossomBeauty());
+        BaseMod.addCard(new SpectralSorceress());
+    }
+
+    @Override
+    public void receiveAddAudio(){
+        BaseMod.addAudio("SvTS:Test", "sounds/Test.wav");
+
+        //---------------TODO---------------
+        BaseMod.addAudio("SvTS:BlossomBeauty", "sounds/BlossomBeauty.wav");
+        BaseMod.addAudio("SvTS:BlossomBeauty_Evolved", "sounds/BlossomBeauty_Evolved.wav");
+        BaseMod.addAudio("SvTS:SpectralSorceress", "sounds/SpectralSorceress.wav");
+        BaseMod.addAudio("SvTS:SpectralSorceress_Evolved", "sounds/SpectralSorceress_Evolved.wav");
+        BaseMod.addAudio("SvTS:Power_SpectralSorceress_Trigger", "sounds/Power_SpectralSorceress_Trigger.wav");
+        BaseMod.addAudio("SvTS:Ghost", "sounds/Ghost.wav");
+        BaseMod.addAudio("SvTS:Ghost_Evolved", "sounds/Ghost_Evolved.wav");
+        BaseMod.addAudio("SvTS:Strike_Necromancer_Upgraded", "sounds/Strike_Necromancer_Upgraded.mp3");
+        BaseMod.addAudio("SvTS:Defend_Necromancer_Upgraded", "sounds/Defend_Necromancer_Upgraded.mp3");
     }
 
     @Override

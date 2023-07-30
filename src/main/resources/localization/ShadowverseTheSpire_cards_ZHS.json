@@ -76,5 +76,14 @@
   "SvTS:Lich": {
     "NAME": "巫妖",
     "DESCRIPTION": "造成 !D! 点伤害 NL 消耗"
+  },
+  "SvTS:BlossomBeauty": {
+    "NAME": "绽樱幽灵",
+    "DESCRIPTION": "造成 !D! 点伤害，抽一张牌 NL 唤灵 (4)：在打出前 升级",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，抽一张牌 NL 在打出后 *解除升级"
+  },
+  "SvTS:SpectralSorceress": {
+    "NAME": "幽灵之友",
+    "DESCRIPTION": "获得 !B! 点格挡。本回合中卡牌消失时，自己的墓地+1 NL 增加一张 *怨灵 到手中"
   }
 }

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
@@ -56,5 +57,16 @@ public class Test extends SvTS_AbstractCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
+    }
+
+    private boolean AbleToNecromancy(AbstractPlayer Player, int number){
+        if(Player.hasPower("SvTS:Cemetery")){
+            for(AbstractPower i : Player.powers){
+                if(i.ID.equals("SvTS:Cemetery")){
+                    return i.amount >= number;
+                }
+            }
+        }
+        return false;
     }
 }

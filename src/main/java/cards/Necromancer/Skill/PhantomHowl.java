@@ -52,10 +52,6 @@ public class PhantomHowl extends SvTS_AbstractCard {
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
         int number = 10 - Player.hand.size();
-
-        System.out.println("墓地");
-        System.out.println(GetNecromancy(Player));
-        System.out.println(number);
         if(10 - Player.hand.size() > GetNecromancy(Player)){
             number = GetNecromancy(Player);
         }

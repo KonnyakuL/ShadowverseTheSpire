@@ -3,6 +3,7 @@ package cards.Necromancer.Attack;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -43,6 +44,12 @@ public class Ghost extends SvTS_AbstractCard {
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
+        if(this.upgraded){
+            addToBot(new SFXAction("SvTS:Ghost_Evolved"));
+        }
+        else{
+            addToBot(new SFXAction("SvTS:Ghost"));
+        }
         addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
 

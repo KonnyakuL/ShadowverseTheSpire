@@ -2,6 +2,7 @@ package cards.Necromancer.Base;
 
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -41,6 +42,9 @@ public class Defend_Necromancer extends SvTS_AbstractCard {
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
+        if(this.upgraded){
+            addToBot(new SFXAction("SvTS:Defend_Necromancer_Upgraded"));
+        }
         addToBot(new GainBlockAction(Player, Player, this.block));
     }
 
