@@ -175,6 +175,7 @@ public class Necromancer extends SvTS_AbstractPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
+        CardCrawlGame.sound.play("SvTS:Luna_Chosen");
     }
 
 //    public void updateOrb(int OrbCount){

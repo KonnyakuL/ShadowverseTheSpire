@@ -33,7 +33,7 @@
   },
   "SvTS:GhoulsBanquet": {
     "NAME": "亡者的盛宴",
-    "DESCRIPTION": "每当自己发动 唤灵 时，增加一张 *怨灵 到手中"
+    "DESCRIPTION": "每当自己发动 唤灵 时，增加1张 *怨灵 到手中"
   },
   "SvTS:SkeletonViper": {
     "NAME": "骸骨巨蛇",
@@ -45,7 +45,7 @@
   },
   "SvTS:PhantomHowl": {
     "NAME": "幻影之啸",
-    "DESCRIPTION": "「 唤灵 (1):增加一张 *怨灵 到手中」重复此动作直至手牌数上限或墓地耗尽"
+    "DESCRIPTION": "「 唤灵 (1):增加1张 *怨灵 到手中」重复此动作直到手牌达到上限或墓地耗尽"
   },
   "SvTS:LordAtomy": {
     "NAME": "骨骸王",
@@ -79,11 +79,29 @@
   },
   "SvTS:BlossomBeauty": {
     "NAME": "绽樱幽灵",
-    "DESCRIPTION": "造成 !D! 点伤害，抽一张牌 NL 唤灵 (4)：在打出前 升级",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，抽一张牌 NL 在打出后 *解除升级"
+    "DESCRIPTION": "造成 !D! 点伤害，抽1张牌 NL 唤灵 (4)：在打出前 升级",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，抽1张牌 NL 在打出后 *解除升级"
   },
   "SvTS:SpectralSorceress": {
     "NAME": "幽灵之友",
-    "DESCRIPTION": "获得 !B! 点格挡。本回合中卡牌消失时，自己的墓地+1 NL 增加一张 *怨灵 到手中"
+    "DESCRIPTION": "获得 !B! 点格挡。本回合中卡牌消失时，自己的墓地+1 NL 增加1张 *怨灵 到手中"
+  },
+  "SvTS:Skeleton": {
+    "NAME": "骸骨士兵",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 消耗"
+  },
+  "SvTS:BoneBlast": {
+    "NAME": "骸骨爆裂",
+    "DESCRIPTION": "增加3张 *骸骨士兵 到手中。造成自己手中 *骸骨士兵 数量2倍的伤害",
+    "UPGRADE_DESCRIPTION": "增加3张 *骸骨士兵+ 到手中。造成自己手中 *骸骨士兵 数量3倍的伤害"
+  },
+  "SvTS:BoneMarauder": {
+    "NAME": "骸骨掠夺者",
+    "DESCRIPTION": "获得 !B! 点格挡，增加1张 *骸骨爆裂 到手中，使其本回合费用为0并在使用后 消耗"
+  },
+  "SvTS:SkullPredator": {
+    "NAME": "骷髅掠食怪",
+    "DESCRIPTION": "增加1张 *骸骨士兵 到手中 NL 自己的回合开始时回复1点生命。如果手牌中有 *骸骨士兵 ，随机消耗1张并抽1张牌 NL 爆能强化 2:破坏1张牌，并升级这张牌",
+    "UPGRADE_DESCRIPTION": "增加1张 *骸骨士兵 到手中 NL 自己的回合结束时获得3点格挡。如果手牌中有 *骸骨士兵 ，随机使1张获得 保留 NL 自己的回合开始时回复1点生命。如果手牌中有 *骸骨士兵 ，随机消耗1张并抽1张牌"
   }
 }

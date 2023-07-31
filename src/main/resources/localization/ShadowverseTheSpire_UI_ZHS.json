@@ -3,5 +3,15 @@
     "TEXT": [
       "选择被破坏的 %d 张牌"
     ]
+  },
+  "SvTS:AddExhaustModifier": {
+    "TEXT": [
+      " NL 消耗"
+    ]
+  },
+  "SvTS:AddRetainModifier": {
+    "TEXT": [
+      " NL 保留"
+    ]
   }
 }

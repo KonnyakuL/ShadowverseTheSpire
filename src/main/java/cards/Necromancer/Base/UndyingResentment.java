@@ -4,6 +4,7 @@ import actions.Necromancy;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -45,6 +46,7 @@ public class UndyingResentment extends SvTS_AbstractCard {
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
+        addToBot(new SFXAction("SvTS:UndyingResentment"));
         addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot(new Necromancy(Player, NECROMANCY, new DamageAction(Monster, new DamageInfo(Player, NECROMANCY_DMG, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL)));
     }

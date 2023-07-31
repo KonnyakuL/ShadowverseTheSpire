@@ -27,11 +27,11 @@ public class Necromancy extends AbstractGameAction {
         }
 
         if(necromance >= this.amount){
-            addToBot(new ApplyPowerAction(this.target, this.target, new Cemetery(this.target, -this.amount)));
-            addToBot(this.action);
             if(this.target.hasPower("SvTS:Power_GhoulsBanquet")){
-                addToBot(new SvTS_MakeTempCardInHandAction(new Ghost()));
+                addToTop(new SvTS_MakeTempCardInHandAction(new Ghost()));
             }
+            addToTop(this.action);
+            addToTop(new ApplyPowerAction(this.target, this.target, new Cemetery(this.target, -this.amount)));
         }
 
         this.isDone = true;

@@ -1,9 +1,8 @@
 package cards.Necromancer.Skill;
 
-import actions.Necromancy;
-import actions.SvTS_MakeTempCardInHandAction;
-import cards.SvTS_AbstractCard;
+import actions.PhantomHowlAction;
 import cards.Necromancer.Attack.Ghost;
+import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -51,13 +50,7 @@ public class PhantomHowl extends SvTS_AbstractCard {
     @Override
     public void use(AbstractPlayer Player, AbstractMonster Monster){
         isUsed = true;
-        int number = 10 - Player.hand.size();
-        if(10 - Player.hand.size() > GetNecromancy(Player)){
-            number = GetNecromancy(Player);
-        }
-        while(number-- > 0){
-            addToBot(new Necromancy(Player, NECROMANCY, new SvTS_MakeTempCardInHandAction(new Ghost())));
-        }
+        addToBot(new PhantomHowlAction(Player, 1));
     }
 
     @Override

@@ -6,7 +6,9 @@ import cards.Necromancer.Attack.*;
 import cards.Necromancer.Base.*;
 import cards.Necromancer.Heroes_of_Rivenbrandt.*;
 import cards.Necromancer.Power.*;
+import cards.Necromancer.Rebirth_of_Glory.BoneBlast;
 import cards.Necromancer.Skill.*;
+import cards.Necromancer.Token.Skeleton;
 import characters.Necromancer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -76,44 +78,69 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new Test());
-        //---------------TODO---------------
+        //---------------Basic---------------
         BaseMod.addCard(new Strike_Necromancer());
         BaseMod.addCard(new Defend_Necromancer());
         BaseMod.addCard(new ElderSpartoiSoldier());
         BaseMod.addCard(new UndyingResentment());
+
         BaseMod.addCard(new SkeletonOgre());
         BaseMod.addCard(new BurialGrounds());
-        BaseMod.addCard(new Ghost());
         BaseMod.addCard(new GhoulsBanquet());
         BaseMod.addCard(new SkeletonViper());
         BaseMod.addCard(new FoulTempest());
         BaseMod.addCard(new PhantomHowl());
         BaseMod.addCard(new LordAtomy());
         BaseMod.addCard(new Cerberus());
-        BaseMod.addCard(new Mimi());
-        BaseMod.addCard(new Coco());
         BaseMod.addCard(new DeathlyTyrant());
         BaseMod.addCard(new ImpiousResurrection());
-        BaseMod.addCard(new Lich());
 
+        //---------------Token---------------
+        BaseMod.addCard(new Ghost());
+        BaseMod.addCard(new Mimi());
+        BaseMod.addCard(new Coco());
+        BaseMod.addCard(new Lich());
+        BaseMod.addCard(new Skeleton());
+
+        //---------------Rebirth of Glory---------------
+        BaseMod.addCard(new BoneBlast());
+
+        //---------------Heroes of Rivenbrandt---------------
         BaseMod.addCard(new BlossomBeauty());
         BaseMod.addCard(new SpectralSorceress());
+        BaseMod.addCard(new BoneMarauder());
+        BaseMod.addCard(new SkullPredator());
     }
 
     @Override
     public void receiveAddAudio(){
         BaseMod.addAudio("SvTS:Test", "sounds/Test.wav");
+        BaseMod.addAudio("SvTS:Luna_Chosen", "sounds/Luna_Chosen.mp3");
+        //---------------Basic---------------
+        BaseMod.addAudio("SvTS:Strike_Necromancer_Upgraded", "sounds/Strike_Necromancer_Upgraded.mp3");
+        BaseMod.addAudio("SvTS:Defend_Necromancer_Upgraded", "sounds/Defend_Necromancer_Upgraded.mp3");
+        BaseMod.addAudio("SvTS:UndyingResentment", "sounds/UndyingResentment.wav");
+        BaseMod.addAudio("SvTS:ElderSpartoiSoldier", "sounds/ElderSpartoiSoldier.wav");
+        BaseMod.addAudio("SvTS:ElderSpartoiSoldier_Evolved", "sounds/ElderSpartoiSoldier_Evolved.wav");
 
-        //---------------TODO---------------
+        //---------------Token---------------
+        BaseMod.addAudio("SvTS:Ghost", "sounds/Ghost.wav");
+        BaseMod.addAudio("SvTS:Ghost_Evolved", "sounds/Ghost_Evolved.wav");
+        BaseMod.addAudio("SvTS:Skeleton", "sounds/Skeleton.wav");
+        BaseMod.addAudio("SvTS:Skeleton_Evolved", "sounds/Skeleton_Evolved.wav");
+
+        //---------------Heroes of Rivenbrandt---------------
         BaseMod.addAudio("SvTS:BlossomBeauty", "sounds/BlossomBeauty.wav");
         BaseMod.addAudio("SvTS:BlossomBeauty_Evolved", "sounds/BlossomBeauty_Evolved.wav");
         BaseMod.addAudio("SvTS:SpectralSorceress", "sounds/SpectralSorceress.wav");
         BaseMod.addAudio("SvTS:SpectralSorceress_Evolved", "sounds/SpectralSorceress_Evolved.wav");
-        BaseMod.addAudio("SvTS:Power_SpectralSorceress_Trigger", "sounds/Power_SpectralSorceress_Trigger.wav");
-        BaseMod.addAudio("SvTS:Ghost", "sounds/Ghost.wav");
-        BaseMod.addAudio("SvTS:Ghost_Evolved", "sounds/Ghost_Evolved.wav");
-        BaseMod.addAudio("SvTS:Strike_Necromancer_Upgraded", "sounds/Strike_Necromancer_Upgraded.mp3");
-        BaseMod.addAudio("SvTS:Defend_Necromancer_Upgraded", "sounds/Defend_Necromancer_Upgraded.mp3");
+        BaseMod.addAudio("SvTS:Power_SpectralSorceress_Effect", "sounds/Power_SpectralSorceress_Effect.wav");
+        BaseMod.addAudio("SvTS:BoneMarauder", "sounds/BoneMarauder.wav");
+        BaseMod.addAudio("SvTS:BoneMarauder_Evolved", "sounds/BoneMarauder_Evolved.wav");
+        BaseMod.addAudio("SvTS:SkullPredator", "sounds/SkullPredator.wav");
+        BaseMod.addAudio("SvTS:SkullPredator_Evolved", "sounds/SkullPredator_Evolved.wav");
+        BaseMod.addAudio("SvTS:SkullPredator_Enhance", "sounds/SkullPredator_Enhance.wav");
+        BaseMod.addAudio("SvTS:Power_SkullPredator_Effect", "sounds/Power_SkullPredator_Effect.wav");
     }
 
     @Override

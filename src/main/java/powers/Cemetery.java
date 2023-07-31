@@ -47,7 +47,7 @@ public class Cemetery extends AbstractPower {
             updateDescription();
         }
         else if(AbstractDungeon.player.hasPower("SvTS:Power_SpectralSorceress")){
-            addToBot(new SFXAction("SvTS:Power_SpectralSorceress_Trigger"));
+            addToBot(new SFXAction("SvTS:Power_SpectralSorceress_Effect"));
             addToBot(new GainCemetery(AbstractDungeon.player, AbstractDungeon.player, 1));
         }
     }

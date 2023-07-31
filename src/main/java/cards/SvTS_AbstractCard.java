@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public abstract class SvTS_AbstractCard extends CustomCard {
+    public int BaseCost;
     public static class SvTS_Enums{
         @SpireEnum public static AbstractCard.CardTags Necromancer;
 
@@ -48,6 +49,7 @@ public abstract class SvTS_AbstractCard extends CustomCard {
 
     public SvTS_AbstractCard(String ID, String NAME, String IMG_PATH, int COST, String DESCRIPTION, CardType TYPE, CardColor COLOR, CardRarity RARITY, CardTarget TARGET){
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        this.BaseCost = COST;
         isUsed = false;
     }
 
@@ -63,5 +65,11 @@ public abstract class SvTS_AbstractCard extends CustomCard {
         if(!isUsed && !this.cardID.equals("SvTS:Ghost")){
             addToBot(new GainCemetery(AbstractDungeon.player, AbstractDungeon.player, 1));
         }
+    }
+
+    @Override
+    public void upgradeBaseCost(int newBaseCost){
+        this.BaseCost = newBaseCost;
+        super.upgradeBaseCost(newBaseCost);
     }
 }

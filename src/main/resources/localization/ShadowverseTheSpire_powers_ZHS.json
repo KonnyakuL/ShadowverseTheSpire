@@ -2,7 +2,7 @@
   "SvTS:TestPower": {
     "NAME": "测试能力",
     "DESCRIPTIONS": [
-      "当你受到 #y违背格挡 的攻击伤害时，恢复 #b%d 点生命。"
+      "当你受到 #y未被格挡 的攻击伤害时，恢复 #b%d 点生命。"
     ]
   },
   "SvTS:Cemetery": {
@@ -20,13 +20,25 @@
   "SvTS:Power_GhoulsBanquet": {
     "NAME": "亡者的盛宴",
     "DESCRIPTIONS": [
-      "每当自己发动 唤灵 时，增加一张怨灵到手中"
+      "每当自己发动 #y唤灵 时，增加1张 #y怨灵 到手中"
     ]
   },
   "SvTS:Power_SpectralSorceress": {
     "NAME": "幽灵之友",
     "DESCRIPTIONS": [
       "本回合中卡牌消失时，自己的墓地+1"
+    ]
+  },
+  "SvTS:Power_SkullPredator": {
+    "NAME": "骷髅掠食怪",
+    "DESCRIPTIONS": [
+      "自己的回合开始时回复1点生命。如果手牌中有 #y骸骨士兵 ，随机消耗1张并抽1张牌"
+    ]
+  },
+  "SvTS:Power_SkullPredator_Evolved": {
+    "NAME": "骷髅掠食怪",
+    "DESCRIPTIONS": [
+      "自己的回合结束时获得3点格挡。如果手牌中有 #y骸骨士兵 ，随机使1张获得 #y保留"
     ]
   }
 }
