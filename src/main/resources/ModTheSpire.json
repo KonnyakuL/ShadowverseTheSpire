@@ -4,11 +4,11 @@
   "author_list": [
     "Konnyaku"
   ],
-  "description": "ShadowverseTheSpire v0.0.9 Edit on 2023/7/31",
+  "description": "ShadowverseTheSpire v0.0.11 Edit on 2023/8/12",
   "dependencies": [
     "basemod"
   ],
-  "version": "0.0.9",
+  "version": "0.0.11",
   "mts_version": "3.30.3",
   "sts_version": "12-28-2022"
 }

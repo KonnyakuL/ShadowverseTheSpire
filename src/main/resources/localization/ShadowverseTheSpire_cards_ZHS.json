@@ -1,7 +1,10 @@
 {
   "SvTS:Test": {
     "NAME": "TEST",
-    "DESCRIPTION": "亡者召还 6"
+    "DESCRIPTION": "抽1张牌 NL ---------- NL 激奏 (0)： 升级 1张牌",
+    "EXTENDED_DESCRIPTION": [
+      "抽1张牌"
+    ]
   },
   "SvTS:Strike_Necromancer": {
     "NAME": "打击",
@@ -103,5 +106,14 @@
     "NAME": "骷髅掠食怪",
     "DESCRIPTION": "增加1张 *骸骨士兵 到手中 NL 自己的回合开始时回复1点生命。如果手牌中有 *骸骨士兵 ，随机消耗1张并抽1张牌 NL 爆能强化 2:破坏1张牌，并升级这张牌",
     "UPGRADE_DESCRIPTION": "增加1张 *骸骨士兵 到手中 NL 自己的回合结束时获得3点格挡。如果手牌中有 *骸骨士兵 ，随机使1张获得 保留 NL 自己的回合开始时回复1点生命。如果手牌中有 *骸骨士兵 ，随机消耗1张并抽1张牌"
+  },
+  "SvTS:HellfireStrike": {
+    "NAME": "魔炎斩击",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 唤灵 (4)：对所有敌人造成 !M! 点伤害"
+  },
+  "SvTS:MisguidedMaiden": {
+    "NAME": "亡骸复活者",
+    "DESCRIPTION": "葬送 1张牌：抽2张牌",
+    "UPGRADE_DESCRIPTION": "葬送 1张牌：抽2张牌 NL [#g]升级时[] 发动 亡者召还 2,并使其本回合基础伤害翻倍"
   }
 }

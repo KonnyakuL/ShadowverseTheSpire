@@ -110,6 +110,8 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addCard(new SpectralSorceress());
         BaseMod.addCard(new BoneMarauder());
         BaseMod.addCard(new SkullPredator());
+        BaseMod.addCard(new HellfireStrike());
+        BaseMod.addCard(new MisguidedMaiden());
     }
 
     @Override
@@ -141,6 +143,10 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addAudio("SvTS:SkullPredator_Evolved", "sounds/SkullPredator_Evolved.wav");
         BaseMod.addAudio("SvTS:SkullPredator_Enhance", "sounds/SkullPredator_Enhance.wav");
         BaseMod.addAudio("SvTS:Power_SkullPredator_Effect", "sounds/Power_SkullPredator_Effect.wav");
+        BaseMod.addAudio("SvTS:HellfireStrike", "sounds/HellfireStrike.wav");
+        BaseMod.addAudio("SvTS:MisguidedMaiden", "sounds/MisguidedMaiden.wav");
+        BaseMod.addAudio("SvTS:MisguidedMaiden_Evolved", "sounds/MisguidedMaiden_Evolved.wav");
+        BaseMod.addAudio("SvTS:MisguidedMaiden_Evolving", "sounds/MisguidedMaiden_Evolving.wav");
     }
 
     @Override

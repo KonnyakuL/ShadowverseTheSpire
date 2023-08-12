@@ -4,7 +4,7 @@ import actions.Destroy;
 import actions.SvTS_MakeTempCardInHandAction;
 import actions.Waiting;
 import cards.Necromancer.Token.Skeleton;
-import cards.SvTS_EnhanceAbstractCard;
+import cards.SvTS_CostChangableAbstractCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,7 +18,7 @@ import powers.Power_SkullPredator_Evolved;
 
 import static pathes.AbstractCardEnum.SvTS_Necromancer_Color;
 
-public class SkullPredator extends SvTS_EnhanceAbstractCard {
+public class SkullPredator extends SvTS_CostChangableAbstractCard {
     private static final CardStrings CARDSTRINGS = CardCrawlGame.languagePack.getCardStrings("SvTS:SkullPredator");
 
     public static final String ID = "SvTS:SkullPredator";

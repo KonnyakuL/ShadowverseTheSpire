@@ -4,6 +4,16 @@
       "选择被破坏的 %d 张牌"
     ]
   },
+  "SvTS:Evolve": {
+    "TEXT": [
+      "升级"
+    ]
+  },
+  "SvTS:Burial": {
+    "TEXT": [
+      "葬送"
+    ]
+  },
   "SvTS:AddExhaustModifier": {
     "TEXT": [
       " NL 消耗"
