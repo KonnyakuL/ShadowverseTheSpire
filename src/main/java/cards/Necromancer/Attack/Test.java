@@ -96,6 +96,7 @@ public class Test extends SvTS_CostChangableAbstractCard {
         if(!this.upgraded){
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            super.upgrade();
         }
     }
 }

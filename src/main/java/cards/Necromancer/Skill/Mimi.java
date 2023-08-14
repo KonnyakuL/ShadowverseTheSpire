@@ -45,12 +45,6 @@ public class Mimi extends SvTS_AbstractCard {
     }
 
     @Override
-    public void triggerOnExhaust(){
-
-        super.triggerOnExhaust();
-    }
-
-    @Override
     public AbstractCard makeCopy(){
         return new Mimi();
     }
@@ -60,6 +54,7 @@ public class Mimi extends SvTS_AbstractCard {
         if(!this.upgraded){
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            super.upgrade();
         }
     }
 

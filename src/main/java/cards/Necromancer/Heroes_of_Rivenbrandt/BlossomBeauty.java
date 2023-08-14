@@ -90,6 +90,7 @@ public class BlossomBeauty extends SvTS_AbstractCard {
             initializeDescription();
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 

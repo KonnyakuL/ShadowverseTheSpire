@@ -93,6 +93,7 @@ public class SkullPredator extends SvTS_CostChangableAbstractCard {
             initializeDescription();
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 }

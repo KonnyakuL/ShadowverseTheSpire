@@ -43,10 +43,6 @@ public class Coco extends SvTS_AbstractCard {
         addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.heal));
     }
 
-    public void triggerOnExhaust(){
-        super.triggerOnExhaust();
-    }
-
     @Override
     public AbstractCard makeCopy(){
         return new Coco();
@@ -58,6 +54,7 @@ public class Coco extends SvTS_AbstractCard {
             upgradeName();
             this.heal += UPGRADE_PLUS_HEAL;
             upgradeMagicNumber(UPGRADE_PLUS_HEAL);
+            super.upgrade();
         }
     }
 

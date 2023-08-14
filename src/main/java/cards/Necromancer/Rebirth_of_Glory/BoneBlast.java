@@ -57,6 +57,7 @@ public class BoneBlast extends SvTS_AbstractCard {
             this.cardsToPreview.upgrade();
             this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
+            super.upgrade();
         }
     }
 

@@ -66,6 +66,7 @@ public class ElderSpartoiSoldier extends SvTS_AbstractCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.textureImg = "img/Necromancer/cards/Base/ElderSpartoiSoldier_Evolved.png";
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 }

@@ -38,7 +38,7 @@ public class SelectCardsToEvolve extends AbstractGameAction {
                 return;
             }
             AbstractDungeon.player.hand.group.removeAll(this.TmpToRemove);
-            AbstractDungeon.handCardSelectScreen.open(String.format(CardCrawlGame.languagePack.getUIString("SvTS:Evolve").TEXT[0], this.number), this.number, false);
+            AbstractDungeon.handCardSelectScreen.open(CardCrawlGame.languagePack.getUIString("SvTS:Evolve").TEXT[0], this.number, false);
             tickDuration();
             return;
         }

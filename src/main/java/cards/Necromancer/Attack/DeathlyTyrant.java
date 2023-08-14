@@ -80,6 +80,7 @@ public class DeathlyTyrant extends SvTS_AbstractCard {
             this.textureImg = "img/Necromancer/cards/Attack/DeathlyTyrant_Evolved.png";
             loadCardImage(this.textureImg);
             initializeDescription();
+            super.upgrade();
         }
     }
 

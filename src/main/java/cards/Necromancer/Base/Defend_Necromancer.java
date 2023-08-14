@@ -53,6 +53,7 @@ public class Defend_Necromancer extends SvTS_AbstractCard {
         if(!this.upgraded){
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+            super.upgrade();
         }
     }
 

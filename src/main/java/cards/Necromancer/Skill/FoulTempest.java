@@ -69,6 +69,7 @@ public class FoulTempest extends SvTS_AbstractCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(3 * UPGRADE_PLUS_DMG);
+            super.upgrade();
         }
     }
 

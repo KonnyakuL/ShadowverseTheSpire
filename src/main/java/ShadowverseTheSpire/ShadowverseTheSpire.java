@@ -5,10 +5,13 @@ import basemod.interfaces.*;
 import cards.Necromancer.Attack.*;
 import cards.Necromancer.Base.*;
 import cards.Necromancer.Heroes_of_Rivenbrandt.*;
+import cards.Necromancer.Omen_of_the_Ten.CharonStygianFerrywoman;
+import cards.Necromancer.Omen_of_the_Ten.OrthrusJuniorHellhound;
 import cards.Necromancer.Power.*;
 import cards.Necromancer.Rebirth_of_Glory.BoneBlast;
 import cards.Necromancer.Skill.*;
 import cards.Necromancer.Token.Skeleton;
+import cards.Neutral.EvolutionPoint;
 import characters.Necromancer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -105,6 +108,10 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         //---------------Rebirth of Glory---------------
         BaseMod.addCard(new BoneBlast());
 
+        //---------------Omen of the Ten---------------
+        BaseMod.addCard(new OrthrusJuniorHellhound());
+        BaseMod.addCard(new CharonStygianFerrywoman());
+
         //---------------Heroes of Rivenbrandt---------------
         BaseMod.addCard(new BlossomBeauty());
         BaseMod.addCard(new SpectralSorceress());
@@ -112,6 +119,12 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addCard(new SkullPredator());
         BaseMod.addCard(new HellfireStrike());
         BaseMod.addCard(new MisguidedMaiden());
+        BaseMod.addCard(new PhantomOfTheStrings());
+        BaseMod.addCard(new FeelTheirFear());
+        BaseMod.addCard(new EvolutionPoint());
+        BaseMod.addCard(new SoultakerScion());
+        BaseMod.addCard(new CerberusHowlOfHades());
+
     }
 
     @Override
@@ -131,6 +144,15 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addAudio("SvTS:Skeleton", "sounds/Skeleton.wav");
         BaseMod.addAudio("SvTS:Skeleton_Evolved", "sounds/Skeleton_Evolved.wav");
 
+        //---------------Omen of the Ten---------------
+        BaseMod.addAudio("SvTS:OrthrusJuniorHellhound", "sounds/OrthrusJuniorHellhound.wav");
+        BaseMod.addAudio("SvTS:OrthrusJuniorHellhound_Evolved", "sounds/OrthrusJuniorHellhound_Evolved.wav");
+        BaseMod.addAudio("SvTS:OrthrusJuniorHellhound_CerberusHowlOfHades", "sounds/OrthrusJuniorHellhound_CerberusHowlOfHades.wav");
+        BaseMod.addAudio("SvTS:CharonStygianFerrywoman", "sounds/CharonStygianFerrywoman.wav");
+        BaseMod.addAudio("SvTS:CharonStygianFerrywoman_Evolved", "sounds/CharonStygianFerrywoman_Evolved.wav");
+        BaseMod.addAudio("SvTS:CharonStygianFerrywoman_Effect", "sounds/CharonStygianFerrywoman_Effect.wav");
+        BaseMod.addAudio("SvTS:CharonStygianFerrywoman_CerberusHowlOfHades", "sounds/CharonStygianFerrywoman_CerberusHowlOfHades.wav");
+
         //---------------Heroes of Rivenbrandt---------------
         BaseMod.addAudio("SvTS:BlossomBeauty", "sounds/BlossomBeauty.wav");
         BaseMod.addAudio("SvTS:BlossomBeauty_Evolved", "sounds/BlossomBeauty_Evolved.wav");
@@ -147,6 +169,15 @@ public class ShadowverseTheSpire implements RelicGetSubscriber, PostPowerApplySu
         BaseMod.addAudio("SvTS:MisguidedMaiden", "sounds/MisguidedMaiden.wav");
         BaseMod.addAudio("SvTS:MisguidedMaiden_Evolved", "sounds/MisguidedMaiden_Evolved.wav");
         BaseMod.addAudio("SvTS:MisguidedMaiden_Evolving", "sounds/MisguidedMaiden_Evolving.wav");
+        BaseMod.addAudio("SvTS:PhantomOfTheStrings", "sounds/PhantomOfTheStrings.wav");
+        BaseMod.addAudio("SvTS:PhantomOfTheStrings_Evolved", "sounds/PhantomOfTheStrings_Evolved.wav");
+        BaseMod.addAudio("SvTS:FeelTheirFear", "sounds/FeelTheirFear.wav");
+        BaseMod.addAudio("SvTS:SoultakerScion", "sounds/SoultakerScion.wav");
+        BaseMod.addAudio("SvTS:SoultakerScion_Evolved", "sounds/SoultakerScion_Evolved.wav");
+        BaseMod.addAudio("SvTS:Power_SoultakerScion_Effect", "sounds/Power_SoultakerScion_Effect.wav");
+        BaseMod.addAudio("SvTS:CerberusHowlOfHades", "sounds/CerberusHowlOfHades.wav");
+        BaseMod.addAudio("SvTS:CerberusHowlOfHades_Evolved", "sounds/CerberusHowlOfHades_Evolved.wav");
+        BaseMod.addAudio("SvTS:Power_CerberusHowlOfHades_Effect", "sounds/Power_CerberusHowlOfHades_Effect.wav");
     }
 
     @Override

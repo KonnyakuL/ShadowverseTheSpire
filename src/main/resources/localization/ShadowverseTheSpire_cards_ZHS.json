@@ -52,7 +52,7 @@
   },
   "SvTS:LordAtomy": {
     "NAME": "骨骸王",
-    "DESCRIPTION": "只要自己手牌张数为9张，这张卡花费-5 NL 消耗 自己所有手牌，造成 !D! 点伤害"
+    "DESCRIPTION": "消耗 自己所有手牌，造成 !D! 点伤害 NL 只要自己手牌张数为9张，这张卡花费-5"
   },
   "SvTS:Cerberus": {
     "NAME": "凯尔贝洛斯",
@@ -87,7 +87,7 @@
   },
   "SvTS:SpectralSorceress": {
     "NAME": "幽灵之友",
-    "DESCRIPTION": "获得 !B! 点格挡。本回合中卡牌消失时，自己的墓地+1 NL 增加1张 *怨灵 到手中"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 本回合中卡牌消失时，自己的墓地+1 NL 增加1张 *怨灵 到手中"
   },
   "SvTS:Skeleton": {
     "NAME": "骸骨士兵",
@@ -113,7 +113,37 @@
   },
   "SvTS:MisguidedMaiden": {
     "NAME": "亡骸复活者",
-    "DESCRIPTION": "葬送 1张牌：抽2张牌",
-    "UPGRADE_DESCRIPTION": "葬送 1张牌：抽2张牌 NL [#g]升级时[] 发动 亡者召还 2,并使其本回合基础伤害翻倍"
+    "DESCRIPTION": "葬送 1张牌，抽2张牌 NL 升级 时发动 亡者召还 2,并使其本回合伤害翻倍",
+    "UPGRADE_DESCRIPTION": "葬送 1张牌：抽2张牌"
+  },
+  "SvTS:PhantomOfTheStrings": {
+    "NAME": "返魂的小提琴家",
+    "DESCRIPTION": "破坏 1张牌，如果是消费为2以下的非唤灵师牌，则将1张同名卡牌加入手中，使其本回合费用为0，并 升级 本卡牌。 NL 获得 !B! 点格挡",
+    "UPGRADE_DESCRIPTION": "破坏 1张牌，如果是消费为2以下的非唤灵师牌，则将1张同名卡牌加入手中，使其本回合费用为0。 NL 获得 !B! 点格挡 NL 在打出后 *解除升级"
+  },
+  "SvTS:FeelTheirFear": {
+    "NAME": "骇人大镰",
+    "DESCRIPTION": "下个回合开始时获得18点格挡，额外抽1张牌，对所有敌人造成18点伤害 NL 唤灵 (8)：随机增加1张被消耗的费用为2的攻击牌的复制到手中，使其本回合费用-2"
+  },
+  "SvTS:SoultakerScion": {
+    "NAME": "索魂魔",
+    "DESCRIPTION": "每当发动 唤灵 时，抽1张牌，无法叠加 NL 唤灵 (6)：将1张 *进化点 加入到手中"
+  },
+  "SvTS:EvolutionPoint": {
+    "NAME": "进化点",
+    "DESCRIPTION": "升级 1张攻击或能力牌。每回合仅能打出1张进化点 NL 消失 NL 虚无",
+    "UPGRADE_DESCRIPTION": "升级 1张攻击或能力牌。每回合仅能打出1张进化点 NL 消失 NL 保留"
+  },
+  "SvTS:CerberusHowlOfHades": {
+    "NAME": "冥境咆哮犬·凯尔贝洛斯",
+    "DESCRIPTION": "每当发动 唤灵 时，对所有敌人造成3点伤害，回复自己1点生命 NL 增加1张费用为0的 *冥界斗犬·欧特鲁斯 到手中，如果上个自己回合中有卡牌升级，则改为 *冥河引渡者·凯伦"
+  },
+  "SvTS:OrthrusJuniorHellhound": {
+    "NAME": "冥界斗犬·欧特鲁斯",
+    "DESCRIPTION": "造成 !D! 点伤害 NL 唤灵 (3)：额外造成1次伤害"
+  },
+  "SvTS:CharonStygianFerrywoman": {
+    "NAME": "冥河引渡者·凯伦",
+    "DESCRIPTION": "获得 !B! 点格挡 NL 随机将1张消费为3的唤灵师攻击或能力牌从抽牌堆抽到手中 NL 如果手中有唤灵师攻击或能力牌，发动 唤灵 (5)：到回合结束为止，使1张消费-3"
   }
 }

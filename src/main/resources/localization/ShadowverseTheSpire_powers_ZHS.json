@@ -40,5 +40,17 @@
     "DESCRIPTIONS": [
       "自己的回合结束时获得3点格挡。如果手牌中有 #y骸骨士兵 ，随机使1张获得 #y保留"
     ]
+  },
+  "SvTS:Power_FeelTheirFear": {
+    "NAME": "骇人大镰",
+    "DESCRIPTIONS": [
+      "回合开始时获得%d点格挡，额外抽%d张牌，对所有敌人造成%d点伤害"
+    ]
+  },
+  "SvTS:Power_SoultakerScion": {
+    "NAME": "索魂魔",
+    "DESCRIPTIONS": [
+      "每当发动 #y唤灵 时，抽1张牌"
+    ]
   }
 }

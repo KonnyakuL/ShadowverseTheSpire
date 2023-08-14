@@ -55,6 +55,7 @@ public class Lich extends SvTS_AbstractCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.textureImg = "img/Necromancer/cards/Attack/Lich_Evolved.png";
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 

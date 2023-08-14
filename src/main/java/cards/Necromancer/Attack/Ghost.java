@@ -3,6 +3,7 @@ package cards.Necromancer.Attack;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -65,6 +66,7 @@ public class Ghost extends SvTS_AbstractCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.textureImg = "img/Necromancer/cards/Attack/Ghost_Evolved.png";
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 

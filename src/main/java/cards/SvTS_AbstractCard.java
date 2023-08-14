@@ -2,6 +2,7 @@ package cards;
 
 import actions.GainCemetery;
 import basemod.abstracts.CustomCard;
+import characters.SvTS_AbstractPlayer;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -68,7 +69,7 @@ public abstract class SvTS_AbstractCard extends CustomCard {
 
     @Override
     public void triggerOnExhaust(){
-        if(!isUsed && !this.cardID.equals("SvTS:Ghost")){
+        if(!isUsed && !this.hasTag(SvTS_Enums.Banish)){
             addToBot(new GainCemetery(AbstractDungeon.player, AbstractDungeon.player, 1));
         }
     }
@@ -77,5 +78,12 @@ public abstract class SvTS_AbstractCard extends CustomCard {
     public void upgradeBaseCost(int newBaseCost){
         this.BaseCost = newBaseCost;
         super.upgradeBaseCost(newBaseCost);
+    }
+
+    @Override
+    public void upgrade(){
+        if(this.canUpgrade() && AbstractDungeon.player instanceof SvTS_AbstractPlayer){
+            ((SvTS_AbstractPlayer) AbstractDungeon.player).EvolvedInTurn = true;
+        }
     }
 }

@@ -58,6 +58,7 @@ public class PhantomHowl extends SvTS_AbstractCard {
         if(!this.upgraded){
             upgradeName();
             upgradeBaseCost(1);
+            super.upgrade();
         }
     }
 

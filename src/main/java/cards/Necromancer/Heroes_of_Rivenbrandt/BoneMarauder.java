@@ -55,6 +55,7 @@ public class BoneMarauder extends SvTS_AbstractCard {
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 

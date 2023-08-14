@@ -79,6 +79,7 @@ public class MisguidedMaiden extends SvTS_AbstractCard {
                 }
 
             }
+            super.upgrade();
         }
     }
 }

@@ -61,6 +61,7 @@ public class Strike_Necromancer extends SvTS_AbstractCard {
         if(!this.upgraded){
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            super.upgrade();
         }
     }
 }

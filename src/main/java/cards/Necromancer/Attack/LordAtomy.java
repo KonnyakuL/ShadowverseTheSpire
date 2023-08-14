@@ -73,6 +73,7 @@ public class LordAtomy extends SvTS_AbstractCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.textureImg = "img/Necromancer/cards/Attack/LordAtomy_Evolved.png";
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 

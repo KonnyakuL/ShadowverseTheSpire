@@ -54,6 +54,7 @@ public class SkeletonViper extends SvTS_AbstractCard {
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.textureImg = "img/Necromancer/cards/Attack/SkeletonViper_Evolved.png";
             loadCardImage(this.textureImg);
+            super.upgrade();
         }
     }
 

@@ -45,6 +45,7 @@ public class GhoulsBanquet extends SvTS_AbstractCard {
         if(!this.upgraded){
             upgradeName();
             upgradeBaseCost(0);
+            super.upgrade();
         }
     }
 

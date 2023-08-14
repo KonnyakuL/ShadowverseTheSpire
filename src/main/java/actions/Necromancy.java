@@ -3,6 +3,8 @@ package actions;
 import cards.Necromancer.Attack.Ghost;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import powers.Cemetery;
@@ -32,6 +34,11 @@ public class Necromancy extends AbstractGameAction {
             }
             addToTop(this.action);
             addToTop(new ApplyPowerAction(this.target, this.target, new Cemetery(this.target, -this.amount)));
+
+            if(this.target.hasPower("SvTS:Power_SoultakerScion")){
+                addToBot(new DrawCardAction(1));
+                addToBot(new SFXAction("SvTS:Power_SoultakerScion_Effect"));
+            }
         }
 
         this.isDone = true;
