@@ -1,7 +1,7 @@
 package cards.Necromancer.Skill;
 
 import actions.PhantomHowlAction;
-import cards.Necromancer.Attack.Ghost;
+import cards.Necromancer.Token.Ghost;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -56,9 +56,9 @@ public class PhantomHowl extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeBaseCost(1);
-            super.upgrade();
         }
     }
 

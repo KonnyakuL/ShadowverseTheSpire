@@ -51,11 +51,11 @@ public class BoneMarauder extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 

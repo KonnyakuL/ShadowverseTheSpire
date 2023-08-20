@@ -2,7 +2,7 @@ package cards.Necromancer.Skill;
 
 import actions.Destroy;
 import actions.SvTS_MakeTempCardInHandAction;
-import cards.Necromancer.Attack.Lich;
+import cards.Necromancer.Token.Lich;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -48,11 +48,11 @@ public class ImpiousResurrection extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             this.cardsToPreview.upgrade();
             this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
-            super.upgrade();
         }
     }
 

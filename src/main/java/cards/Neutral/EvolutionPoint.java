@@ -58,6 +58,7 @@ public class EvolutionPoint extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
@@ -65,7 +66,6 @@ public class EvolutionPoint extends SvTS_AbstractCard {
             initializeDescription();
             this.isEthereal = false;
             this.selfRetain = true;
-            super.upgrade();
         }
     }
 

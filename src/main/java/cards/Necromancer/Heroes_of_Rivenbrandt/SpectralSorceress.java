@@ -1,7 +1,7 @@
 package cards.Necromancer.Heroes_of_Rivenbrandt;
 
 import actions.SvTS_MakeTempCardInHandAction;
-import cards.Necromancer.Attack.Ghost;
+import cards.Necromancer.Token.Ghost;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -66,11 +66,11 @@ public class SpectralSorceress extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 }

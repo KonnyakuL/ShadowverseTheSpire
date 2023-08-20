@@ -87,13 +87,13 @@ public class SkullPredator extends SvTS_CostChangableAbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             this.Enhance1_cost = -1;
             this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 }

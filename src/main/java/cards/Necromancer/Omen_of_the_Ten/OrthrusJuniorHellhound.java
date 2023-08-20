@@ -1,5 +1,6 @@
 package cards.Necromancer.Omen_of_the_Ten;
 
+import actions.Necromancy;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -61,7 +62,7 @@ public class OrthrusJuniorHellhound extends SvTS_AbstractCard {
             else addToBot(new SFXAction("SvTS:OrthrusJuniorHellhound"));
         addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         if(AbleToNecromancy(Player, NECROMANCY)){
-            addToBot(new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            addToBot(new Necromancy(Player, NECROMANCY, new DamageAction(Monster, new DamageInfo(Player, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL)));
         }
     }
 
@@ -73,11 +74,11 @@ public class OrthrusJuniorHellhound extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 }

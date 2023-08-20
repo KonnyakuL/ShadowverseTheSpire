@@ -94,9 +94,9 @@ public class Test extends SvTS_CostChangableAbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            super.upgrade();
         }
     }
 }

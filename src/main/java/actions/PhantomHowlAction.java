@@ -1,6 +1,6 @@
 package actions;
 
-import cards.Necromancer.Attack.Ghost;
+import cards.Necromancer.Token.Ghost;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.powers.AbstractPower;

@@ -59,9 +59,9 @@ public class Strike_Necromancer extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            super.upgrade();
         }
     }
 }

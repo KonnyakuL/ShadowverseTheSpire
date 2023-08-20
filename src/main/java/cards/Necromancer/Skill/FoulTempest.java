@@ -66,10 +66,10 @@ public class FoulTempest extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(3 * UPGRADE_PLUS_DMG);
-            super.upgrade();
         }
     }
 

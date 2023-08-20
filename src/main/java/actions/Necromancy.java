@@ -1,10 +1,14 @@
 package actions;
 
-import cards.Necromancer.Attack.Ghost;
+import cards.Necromancer.Token.Ghost;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import powers.Cemetery;
@@ -38,6 +42,15 @@ public class Necromancy extends AbstractGameAction {
             if(this.target.hasPower("SvTS:Power_SoultakerScion")){
                 addToBot(new DrawCardAction(1));
                 addToBot(new SFXAction("SvTS:Power_SoultakerScion_Effect"));
+            }
+            if(this.target.hasPower("SvTS:Power_CerberusHowlOfHades")){
+                for(AbstractPower power : this.target.powers){
+                    if(power.ID.equals("SvTS:Power_CerberusHowlOfHades")){
+                        addToBot(new SFXAction("Power_CerberusHowlOfHades_Effect"));
+                        addToBot(new DamageAllEnemiesAction((AbstractPlayer) this.target, 3 * power.amount, DamageInfo.DamageType.THORNS, AttackEffect.SLASH_HORIZONTAL));
+                        addToBot(new HealAction(this.target, this.target, power.amount));
+                    }
+                }
             }
         }
 

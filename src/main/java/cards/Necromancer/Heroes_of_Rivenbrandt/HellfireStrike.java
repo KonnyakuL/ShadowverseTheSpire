@@ -77,10 +77,10 @@ public class HellfireStrike extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(UPGRADE_PLUS_MAGICNUMBER);
-            super.upgrade();
         }
     }
 }

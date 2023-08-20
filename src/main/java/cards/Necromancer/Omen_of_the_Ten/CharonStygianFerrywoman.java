@@ -3,6 +3,7 @@ package cards.Necromancer.Omen_of_the_Ten;
 import actions.Action_CharonStygianFerrywoman;
 import actions.ChangeCostForTurn;
 import actions.Necromancy;
+import actions.Waiting;
 import cards.SvTS_AbstractCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -63,6 +64,7 @@ public class CharonStygianFerrywoman extends SvTS_AbstractCard {
         else addToBot(new SFXAction("SvTS:CharonStygianFerrywoman"));
         addToBot(new GainBlockAction(Player, this.block));
         addToBot(new Action_CharonStygianFerrywoman(Player));
+        addToBot(new Waiting(0.5F));
         if(AbleToNecromancy(Player, NECROMANCY)){
             addToBot(new Necromancy(Player, NECROMANCY, null));
             addToBot(new ChangeCostForTurn(1, 3));
@@ -79,11 +81,11 @@ public class CharonStygianFerrywoman extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 }

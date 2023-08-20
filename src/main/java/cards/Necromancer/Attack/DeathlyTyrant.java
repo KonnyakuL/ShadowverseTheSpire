@@ -74,13 +74,13 @@ public class DeathlyTyrant extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(UPGRADE_PLUS_MAGICNUMBER);
             this.textureImg = "img/Necromancer/cards/Attack/DeathlyTyrant_Evolved.png";
             loadCardImage(this.textureImg);
             initializeDescription();
-            super.upgrade();
         }
     }
 

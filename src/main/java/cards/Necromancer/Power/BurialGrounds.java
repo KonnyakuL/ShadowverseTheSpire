@@ -42,9 +42,9 @@ public class BurialGrounds extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeBaseCost(0);
-            super.upgrade();
         }
     }
 

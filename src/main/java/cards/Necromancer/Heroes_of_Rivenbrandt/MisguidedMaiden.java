@@ -65,6 +65,7 @@ public class MisguidedMaiden extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             this.upgradeName();
             this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
@@ -79,7 +80,6 @@ public class MisguidedMaiden extends SvTS_AbstractCard {
                 }
 
             }
-            super.upgrade();
         }
     }
 }

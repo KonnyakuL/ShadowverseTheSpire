@@ -52,12 +52,12 @@ public class BoneBlast extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGICNUMBER);
             this.cardsToPreview.upgrade();
             this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
-            super.upgrade();
         }
     }
 

@@ -64,13 +64,13 @@ public class PhantomOfTheStrings extends SvTS_AbstractCard {
 
     @Override
     public void upgrade(){
+        super.upgrade();
         upgradeName();
         this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
         initializeDescription();
         upgradeBlock(UPGRADE_PLUS_BLOCK);
         this.textureImg = UPGRADE_PATH;
         loadCardImage(this.textureImg);
-        super.upgrade();
     }
 
     private void degradeName(){

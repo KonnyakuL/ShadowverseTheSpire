@@ -82,6 +82,7 @@ public class BlossomBeauty extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.damage = this.baseDamage;
@@ -90,7 +91,6 @@ public class BlossomBeauty extends SvTS_AbstractCard {
             initializeDescription();
             this.textureImg = UPGRADE_PATH;
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 

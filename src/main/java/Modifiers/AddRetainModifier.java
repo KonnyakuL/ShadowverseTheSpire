@@ -30,7 +30,7 @@ public class AddRetainModifier extends AbstractCardModifier {
 
     @Override
     public void onInitialApplication(AbstractCard card){
-        card.retain = true;
+        card.selfRetain = card.retain = true;
     }
 
     @Override

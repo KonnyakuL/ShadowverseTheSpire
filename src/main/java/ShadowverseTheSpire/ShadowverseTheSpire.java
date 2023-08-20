@@ -10,7 +10,7 @@ import cards.Necromancer.Omen_of_the_Ten.OrthrusJuniorHellhound;
 import cards.Necromancer.Power.*;
 import cards.Necromancer.Rebirth_of_Glory.BoneBlast;
 import cards.Necromancer.Skill.*;
-import cards.Necromancer.Token.Skeleton;
+import cards.Necromancer.Token.*;
 import cards.Neutral.EvolutionPoint;
 import characters.Necromancer;
 import com.badlogic.gdx.Gdx;

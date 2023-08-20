@@ -45,9 +45,9 @@ public class FeelTheirFear extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeBaseCost(2);
-            super.upgrade();
         }
     }
 

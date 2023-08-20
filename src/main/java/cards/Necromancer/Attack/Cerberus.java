@@ -1,10 +1,9 @@
 package cards.Necromancer.Attack;
 
 import actions.SvTS_MakeTempCardInHandAction;
-import cards.Necromancer.Skill.Coco;
-import cards.Necromancer.Skill.Mimi;
+import cards.Necromancer.Token.Coco;
+import cards.Necromancer.Token.Mimi;
 import cards.SvTS_AbstractCard;
-import characters.SvTS_AbstractPlayer;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -95,6 +93,7 @@ public class Cerberus extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBlock(UPGRADE_PLUS_BLOCK);
@@ -102,7 +101,6 @@ public class Cerberus extends SvTS_AbstractCard {
             loadCardImage(this.textureImg);
             this.rawDescription = CARDSTRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
-            super.upgrade();
         }
     }
 

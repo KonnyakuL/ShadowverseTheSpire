@@ -19,7 +19,7 @@ public class Skeleton extends SvTS_AbstractCard {
     public static final String ID = "SvTS:Skeleton";
     public static final String NAME = CARDSTRINGS.NAME;
     public static final String DESCRIPTION = CARDSTRINGS.DESCRIPTION;
-    public static final String IMG_PATH = "img/Necromancer/cards/Attack/Skeleton.png";
+    public static final String IMG_PATH = "img/Necromancer/cards/Token/Skeleton.png";
 
     private static final int COST = 0;
     private static final int BASE_DMG = 4;
@@ -45,11 +45,11 @@ public class Skeleton extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            this.textureImg = "img/Necromancer/cards/Attack/Skeleton_Evolved.png";
+            this.textureImg = "img/Necromancer/cards/Token/Skeleton_Evolved.png";
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 

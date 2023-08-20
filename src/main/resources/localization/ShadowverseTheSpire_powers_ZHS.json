@@ -52,5 +52,11 @@
     "DESCRIPTIONS": [
       "每当发动 #y唤灵 时，抽1张牌"
     ]
+  },
+  "SvTS:Power_CerberusHowlOfHades": {
+    "NAME": "冥境咆哮犬·凯尔贝洛斯",
+    "DESCRIPTIONS": [
+      "每当发动 #y唤灵 时，对所有敌人造成%d点伤害，回复自己%d点生命"
+    ]
   }
 }

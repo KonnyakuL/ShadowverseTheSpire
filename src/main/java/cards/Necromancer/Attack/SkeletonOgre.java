@@ -72,11 +72,11 @@ public class SkeletonOgre extends SvTS_AbstractCard {
     @Override
     public void upgrade(){
         if(!this.upgraded){
+            super.upgrade();
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             this.textureImg = "img/Necromancer/cards/Attack/SkeletonOgre_Evolved.png";
             loadCardImage(this.textureImg);
-            super.upgrade();
         }
     }
 
